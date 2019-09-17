@@ -2,7 +2,7 @@
 // Project: http://hl7.org/fhir/index.html
 // Definitions by: Artifact Health <https://www.artifacthealth.com>
 // Definitions: https://github.com/borisyankov/DefinitelyTyped
-declare module fhir {
+
     /**
      * Any combination of letters, numerals, "-" and ".", with a length limit of 64 characters.  (This might be an integer, an unprefixed OID, UUID or any other identifier pattern that meets these constraints.)  Ids are case-insensitive.
      */
@@ -62,7 +62,7 @@ declare module fhir {
     /**
      * Time range defined by start and end date/time
      */
-    interface Period extends Element {
+    export interface Period extends Element {
         /**
          * Starting time with inclusive boundary
          */
@@ -83,7 +83,7 @@ declare module fhir {
     /**
      * An address expressed using postal conventions (as opposed to GPS or other location definition formats)
      */
-    interface Address extends Element {
+    export interface Address extends Element {
         /**
          * home | work | temp | old - purpose of this address
          */
@@ -164,7 +164,7 @@ declare module fhir {
     /**
      * A measured or measurable amount
      */
-    interface Quantity extends Element {
+    export interface Quantity extends Element {
         /**
          * Numerical value (with implicit precision)
          */
@@ -209,12 +209,12 @@ declare module fhir {
     /**
      * A duration of time during which an organism (or a process) has existed
      */
-    interface Age extends Quantity {
+    export interface Age extends Quantity {
     }
     /**
      * A reference to a code defined by a terminology system
      */
-    interface Coding extends Element {
+    export interface Coding extends Element {
         /**
          * Identity of the terminology system
          */
@@ -259,7 +259,7 @@ declare module fhir {
     /**
      * Concept - reference to a terminology or just  text
      */
-    interface CodeableConcept extends Element {
+    export interface CodeableConcept extends Element {
         /**
          * Code defined by a terminology system
          */
@@ -276,7 +276,7 @@ declare module fhir {
     /**
      * An identifier intended for computation
      */
-    interface Identifier extends Element {
+    export interface Identifier extends Element {
         /**
          * usual | official | temp | secondary (If known)
          */
@@ -317,7 +317,7 @@ declare module fhir {
     /**
      * A reference from one resource to another
      */
-    interface Reference extends Element {
+    export interface Reference extends Element {
         /**
          * Literal reference, Relative, internal or absolute URL
          */
@@ -342,7 +342,7 @@ declare module fhir {
     /**
      * Text node with attribution
      */
-    interface Annotation extends Element {
+    export interface Annotation extends Element {
         /**
          * Individual responsible for the annotation
          */
@@ -375,7 +375,7 @@ declare module fhir {
     /**
      * Content in a format defined elsewhere
      */
-    interface Attachment extends Element {
+    export interface Attachment extends Element {
         /**
          * Mime type of the content, with charset etc.
          */
@@ -444,7 +444,7 @@ declare module fhir {
     /**
      * Details of a Technology mediated contact point (phone, fax, email, etc.)
      */
-    interface ContactPoint extends Element {
+    export interface ContactPoint extends Element {
         /**
          * phone | fax | email | pager | url | sms | other
          */
@@ -485,22 +485,22 @@ declare module fhir {
     /**
      * A measured or measurable amount
      */
-    interface Count extends Quantity {
+    export interface Count extends Quantity {
     }
     /**
      * A length - a value with a unit that is a physical distance
      */
-    interface Distance extends Quantity {
+    export interface Distance extends Quantity {
     }
     /**
      * A length of time
      */
-    interface Duration extends Quantity {
+    export interface Duration extends Quantity {
     }
     /**
      * Name of a human - parts and usage
      */
-    interface HumanName extends Element {
+    export interface HumanName extends Element {
         /**
          * usual | official | temp | nickname | anonymous | old | maiden
          */
@@ -557,17 +557,17 @@ declare module fhir {
     /**
      * An amount of economic utility in some recognized currency
      */
-    interface Money extends Quantity {
+    export interface Money extends Quantity {
     }
     /**
      * A fixed quantity (no comparator)
      */
-    interface SimpleQuantity extends Quantity {
+    export interface SimpleQuantity extends Quantity {
     }
     /**
      * Set of values bounded by low and high
      */
-    interface Range extends Element {
+    export interface Range extends Element {
         /**
          * Low limit
          */
@@ -580,7 +580,7 @@ declare module fhir {
     /**
      * A ratio of two Quantity values - a numerator and a denominator
      */
-    interface Ratio extends Element {
+    export interface Ratio extends Element {
         /**
          * Numerator value
          */
@@ -593,7 +593,7 @@ declare module fhir {
     /**
      * A series of measurements taken by a device
      */
-    interface SampledData extends Element {
+    export interface SampledData extends Element {
         /**
          * Zero value and units
          */
@@ -650,7 +650,7 @@ declare module fhir {
     /**
      * A digital Signature - XML DigSig, JWT, Graphical image of signature, etc.
      */
-    interface Signature extends Element {
+    export interface Signature extends Element {
         /**
          * Indication of the reason the entity signed the object(s)
          */
@@ -707,7 +707,7 @@ declare module fhir {
     /**
      * When the event is to occur
      */
-    interface TimingRepeat extends Element {
+    export interface TimingRepeat extends Element {
         /**
          * Length/Range of lengths, or (Start and/or end) limits
          */
@@ -836,7 +836,7 @@ declare module fhir {
     /**
      * A timing schedule that specifies an event that may occur multiple times
      */
-    interface Timing extends Element {
+    export interface Timing extends Element {
         /**
          * When the event occurs
          */
@@ -857,7 +857,7 @@ declare module fhir {
     /**
      * Optional Extensions Element
      */
-    interface Extension extends Element {
+    export interface Extension extends Element {
         /**
          * identifies the meaning of the extension
          */
@@ -1086,7 +1086,7 @@ declare module fhir {
     /**
      * Base for all elements
      */
-    interface Element {
+    export interface Element {
         /**
          * Content that would be comments in an XML.
          */
@@ -1111,7 +1111,7 @@ declare module fhir {
     /**
      * Metadata about a resource
      */
-    interface Meta extends Element {
+    export interface Meta extends Element {
         /**
          * Version specific identifier
          */
@@ -1148,7 +1148,7 @@ declare module fhir {
     /**
      * Base Resource
      */
-    interface ResourceBase {
+    export interface ResourceBase {
         /**
          * The type of the resource.
          */
@@ -1189,7 +1189,7 @@ declare module fhir {
     /**
      * A human-readable formatted text, including images
      */
-    interface Narrative extends Element {
+    export interface Narrative extends Element {
         /**
          * generated | extensions | additional | empty
          */
@@ -1210,7 +1210,7 @@ declare module fhir {
     /**
      * A resource with narrative, extensions, and contained resources
      */
-    interface DomainResource extends ResourceBase {
+    export interface DomainResource extends ResourceBase {
         /**
          * Text summary of the resource, for human interpretation
          */
@@ -1231,7 +1231,7 @@ declare module fhir {
     /**
      * Base for elements defined inside a resource
      */
-    interface BackboneElement extends Element {
+    export interface BackboneElement extends Element {
         /**
          * Extensions that cannot be ignored
          */
@@ -1240,7 +1240,7 @@ declare module fhir {
     /**
      * The party(s) that are responsible for covering the payment of this account, and what order should they be applied to the account
      */
-    interface AccountCoverage extends BackboneElement {
+    export interface AccountCoverage extends BackboneElement {
         /**
          * The party(s) that are responsible for covering the payment of this account
          */
@@ -1257,7 +1257,7 @@ declare module fhir {
     /**
      * Responsible for the account
      */
-    interface AccountGuarantor extends BackboneElement {
+    export interface AccountGuarantor extends BackboneElement {
         /**
          * Responsible entity
          */
@@ -1278,7 +1278,7 @@ declare module fhir {
     /**
      * Tracks balance, charges, for patient or cost center
      */
-    interface Account extends DomainResource {
+    export interface Account extends DomainResource {
         /**
          * Account number
          */
@@ -1343,7 +1343,7 @@ declare module fhir {
     /**
      * Describes the context of use for a conformance or knowledge resource
      */
-    interface UsageContext extends Element {
+    export interface UsageContext extends Element {
         /**
          * Type of context being specified
          */
@@ -1364,7 +1364,7 @@ declare module fhir {
     /**
      * Contact information
      */
-    interface ContactDetail extends Element {
+    export interface ContactDetail extends Element {
         /**
          * Name of an individual to contact
          */
@@ -1381,7 +1381,7 @@ declare module fhir {
     /**
      * Contributor information
      */
-    interface Contributor extends Element {
+    export interface Contributor extends Element {
         /**
          * author | editor | reviewer | endorser
          */
@@ -1406,7 +1406,7 @@ declare module fhir {
     /**
      * Related artifacts for a knowledge resource
      */
-    interface RelatedArtifact extends Element {
+    export interface RelatedArtifact extends Element {
         /**
          * documentation | justification | citation | predecessor | successor | derived-from | depends-on | composed-of
          */
@@ -1451,7 +1451,7 @@ declare module fhir {
     /**
      * Who should participate in the action
      */
-    interface ActivityDefinitionParticipant extends BackboneElement {
+    export interface ActivityDefinitionParticipant extends BackboneElement {
         /**
          * patient | practitioner | related-person
          */
@@ -1468,7 +1468,7 @@ declare module fhir {
     /**
      * How the medication is/was taken or should be taken
      */
-    interface Dosage extends Element {
+    export interface Dosage extends Element {
         /**
          * The order of the dosage instructions
          */
@@ -1561,7 +1561,7 @@ declare module fhir {
     /**
      * Dynamic aspects of the definition
      */
-    interface ActivityDefinitionDynamicValue extends BackboneElement {
+    export interface ActivityDefinitionDynamicValue extends BackboneElement {
         /**
          * Natural language description of the dynamic value
          */
@@ -1598,7 +1598,7 @@ declare module fhir {
     /**
      * The definition of a specific activity to be taken, independent of any particular patient or context
      */
-    interface ActivityDefinition extends DomainResource {
+    export interface ActivityDefinition extends DomainResource {
         /**
          * Logical URI to reference this activity definition (globally unique)
          */
@@ -1819,7 +1819,7 @@ declare module fhir {
     /**
      * The suspected agent causing the adverse event
      */
-    interface AdverseEventSuspectEntity extends BackboneElement {
+    export interface AdverseEventSuspectEntity extends BackboneElement {
         /**
          * Refers to the specific entity that caused the adverse event
          */
@@ -1860,7 +1860,7 @@ declare module fhir {
     /**
      * Medical care, research study or other healthcare event causing physical injury
      */
-    interface AdverseEvent extends DomainResource {
+    export interface AdverseEvent extends DomainResource {
         /**
          * Business identifier for the event
          */
@@ -1941,7 +1941,7 @@ declare module fhir {
     /**
      * Adverse Reaction Events linked to exposure to substance
      */
-    interface AllergyIntoleranceReaction extends BackboneElement {
+    export interface AllergyIntoleranceReaction extends BackboneElement {
         /**
          * Specific substance or pharmaceutical product considered to be responsible for event
          */
@@ -1986,7 +1986,7 @@ declare module fhir {
     /**
      * Allergy or Intolerance (generally: Risk of adverse reaction to a substance)
      */
-    interface AllergyIntolerance extends DomainResource {
+    export interface AllergyIntolerance extends DomainResource {
         /**
          * External ids for this item
          */
@@ -2103,7 +2103,7 @@ declare module fhir {
     /**
      * Participants involved in appointment
      */
-    interface AppointmentParticipant extends BackboneElement {
+    export interface AppointmentParticipant extends BackboneElement {
         /**
          * Role of participant in the appointment
          */
@@ -2132,7 +2132,7 @@ declare module fhir {
     /**
      * A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s)
      */
-    interface Appointment extends DomainResource {
+    export interface Appointment extends DomainResource {
         /**
          * External Ids for this item
          */
@@ -2249,7 +2249,7 @@ declare module fhir {
     /**
      * A reply to an appointment request for a patient and/or practitioner(s), such as a confirmation or rejection
      */
-    interface AppointmentResponse extends DomainResource {
+    export interface AppointmentResponse extends DomainResource {
         /**
          * External Ids for this item
          */
@@ -2302,7 +2302,7 @@ declare module fhir {
     /**
      * Actor involved in the event
      */
-    interface AuditEventAgent extends BackboneElement {
+    export interface AuditEventAgent extends BackboneElement {
         /**
          * Agent role in the event
          */
@@ -2367,7 +2367,7 @@ declare module fhir {
     /**
      * Logical network location for application activity
      */
-    interface AuditEventAgentNetwork extends BackboneElement {
+    export interface AuditEventAgentNetwork extends BackboneElement {
         /**
          * Identifier for the network access point of the user device
          */
@@ -2388,7 +2388,7 @@ declare module fhir {
     /**
      * Audit Event Reporter
      */
-    interface AuditEventSource extends BackboneElement {
+    export interface AuditEventSource extends BackboneElement {
         /**
          * Logical source location within the enterprise
          */
@@ -2409,7 +2409,7 @@ declare module fhir {
     /**
      * Data or objects used
      */
-    interface AuditEventEntity extends BackboneElement {
+    export interface AuditEventEntity extends BackboneElement {
         /**
          * Specific instance of object
          */
@@ -2466,7 +2466,7 @@ declare module fhir {
     /**
      * Additional Information about the entity
      */
-    interface AuditEventEntityDetail extends BackboneElement {
+    export interface AuditEventEntityDetail extends BackboneElement {
         /**
          * Name of the property
          */
@@ -2487,7 +2487,7 @@ declare module fhir {
     /**
      * Event record kept for security purposes
      */
-    interface AuditEvent extends DomainResource {
+    export interface AuditEvent extends DomainResource {
         /**
          * Type/identifier of event
          */
@@ -2548,7 +2548,7 @@ declare module fhir {
     /**
      * Resource for non-supported content
      */
-    interface Basic extends DomainResource {
+    export interface Basic extends DomainResource {
         /**
          * Business identifier
          */
@@ -2577,7 +2577,7 @@ declare module fhir {
     /**
      * Pure binary content defined by a format other than FHIR
      */
-    interface Binary extends ResourceBase {
+    export interface Binary extends ResourceBase {
         /**
          * MimeType of the binary content
          */
@@ -2602,7 +2602,7 @@ declare module fhir {
     /**
      * Specific and identified anatomical location
      */
-    interface BodySite extends DomainResource {
+    export interface BodySite extends DomainResource {
         /**
          * Bodysite identifier
          */
@@ -2643,7 +2643,7 @@ declare module fhir {
     /**
      * Links related to this Bundle
      */
-    interface BundleLink extends BackboneElement {
+    export interface BundleLink extends BackboneElement {
         /**
          * See http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1
          */
@@ -2664,7 +2664,7 @@ declare module fhir {
     /**
      * Entry in the bundle - will have a resource, or information
      */
-    interface BundleEntry extends BackboneElement {
+    export interface BundleEntry extends BackboneElement {
         /**
          * Links related to this entry
          */
@@ -2697,7 +2697,7 @@ declare module fhir {
     /**
      * Search related information
      */
-    interface BundleEntrySearch extends BackboneElement {
+    export interface BundleEntrySearch extends BackboneElement {
         /**
          * match | include | outcome - why this is in the result set
          */
@@ -2718,7 +2718,7 @@ declare module fhir {
     /**
      * Transaction Related Information
      */
-    interface BundleEntryRequest extends BackboneElement {
+    export interface BundleEntryRequest extends BackboneElement {
         /**
          * GET | POST | PUT | DELETE
          */
@@ -2771,7 +2771,7 @@ declare module fhir {
     /**
      * Transaction Related Information
      */
-    interface BundleEntryResponse extends BackboneElement {
+    export interface BundleEntryResponse extends BackboneElement {
         /**
          * Status response code (text optional)
          */
@@ -2812,7 +2812,7 @@ declare module fhir {
     /**
      * Contains a collection of resources
      */
-    interface Bundle extends ResourceBase {
+    export interface Bundle extends ResourceBase {
         /**
          * Persistent identifier for the bundle
          */
@@ -2849,7 +2849,7 @@ declare module fhir {
     /**
      * Software that is covered by this capability statement
      */
-    interface CapabilityStatementSoftware extends BackboneElement {
+    export interface CapabilityStatementSoftware extends BackboneElement {
         /**
          * A name the software is known by
          */
@@ -2878,7 +2878,7 @@ declare module fhir {
     /**
      * If this describes a specific instance
      */
-    interface CapabilityStatementImplementation extends BackboneElement {
+    export interface CapabilityStatementImplementation extends BackboneElement {
         /**
          * Describes this specific instance
          */
@@ -2899,7 +2899,7 @@ declare module fhir {
     /**
      * If the endpoint is a RESTful one
      */
-    interface CapabilityStatementRest extends BackboneElement {
+    export interface CapabilityStatementRest extends BackboneElement {
         /**
          * client | server
          */
@@ -2921,7 +2921,7 @@ declare module fhir {
          */
         security?: CapabilityStatementRestSecurity;
         /**
-         * Resource served on the REST interface
+         * Resource served on the REST export interface
          */
         resource?: CapabilityStatementRestResource[];
         /**
@@ -2948,7 +2948,7 @@ declare module fhir {
     /**
      * Information about security of implementation
      */
-    interface CapabilityStatementRestSecurity extends BackboneElement {
+    export interface CapabilityStatementRestSecurity extends BackboneElement {
         /**
          * Adds CORS Headers (http://enable-cors.org/)
          */
@@ -2977,7 +2977,7 @@ declare module fhir {
     /**
      * Certificates associated with security profiles
      */
-    interface CapabilityStatementRestSecurityCertificate extends BackboneElement {
+    export interface CapabilityStatementRestSecurityCertificate extends BackboneElement {
         /**
          * Mime type for certificates
          */
@@ -2996,9 +2996,9 @@ declare module fhir {
         _blob?: Element;
     }
     /**
-     * Resource served on the REST interface
+     * Resource served on the REST export interface
      */
-    interface CapabilityStatementRestResource extends BackboneElement {
+    export interface CapabilityStatementRestResource extends BackboneElement {
         /**
          * A resource type that is supported
          */
@@ -3111,7 +3111,7 @@ declare module fhir {
     /**
      * What operations are supported?
      */
-    interface CapabilityStatementRestResourceInteraction extends BackboneElement {
+    export interface CapabilityStatementRestResourceInteraction extends BackboneElement {
         /**
          * read | vread | update | patch | delete | history-instance | history-type | create | search-type
          */
@@ -3132,7 +3132,7 @@ declare module fhir {
     /**
      * Search parameters supported by implementation
      */
-    interface CapabilityStatementRestResourceSearchParam extends BackboneElement {
+    export interface CapabilityStatementRestResourceSearchParam extends BackboneElement {
         /**
          * Name of search parameter
          */
@@ -3169,7 +3169,7 @@ declare module fhir {
     /**
      * What operations are supported?
      */
-    interface CapabilityStatementRestInteraction extends BackboneElement {
+    export interface CapabilityStatementRestInteraction extends BackboneElement {
         /**
          * transaction | batch | search-system | history-system
          */
@@ -3190,7 +3190,7 @@ declare module fhir {
     /**
      * Definition of an operation or a custom query
      */
-    interface CapabilityStatementRestOperation extends BackboneElement {
+    export interface CapabilityStatementRestOperation extends BackboneElement {
         /**
          * Name by which the operation/query is invoked
          */
@@ -3207,7 +3207,7 @@ declare module fhir {
     /**
      * If messaging is supported
      */
-    interface CapabilityStatementMessaging extends BackboneElement {
+    export interface CapabilityStatementMessaging extends BackboneElement {
         /**
          * Where messages should be sent
          */
@@ -3221,7 +3221,7 @@ declare module fhir {
          */
         _reliableCache?: Element;
         /**
-         * Messaging interface behavior details
+         * Messaging export interface behavior details
          */
         documentation?: string;
         /**
@@ -3240,7 +3240,7 @@ declare module fhir {
     /**
      * Where messages should be sent
      */
-    interface CapabilityStatementMessagingEndpoint extends BackboneElement {
+    export interface CapabilityStatementMessagingEndpoint extends BackboneElement {
         /**
          * http | ftp | mllp +
          */
@@ -3257,7 +3257,7 @@ declare module fhir {
     /**
      * Messages supported by this system
      */
-    interface CapabilityStatementMessagingSupportedMessage extends BackboneElement {
+    export interface CapabilityStatementMessagingSupportedMessage extends BackboneElement {
         /**
          * sender | receiver
          */
@@ -3274,7 +3274,7 @@ declare module fhir {
     /**
      * Declare support for this event
      */
-    interface CapabilityStatementMessagingEvent extends BackboneElement {
+    export interface CapabilityStatementMessagingEvent extends BackboneElement {
         /**
          * Event type
          */
@@ -3323,7 +3323,7 @@ declare module fhir {
     /**
      * Document definition
      */
-    interface CapabilityStatementDocument extends BackboneElement {
+    export interface CapabilityStatementDocument extends BackboneElement {
         /**
          * producer | consumer
          */
@@ -3348,7 +3348,7 @@ declare module fhir {
     /**
      * A statement of system capabilities
      */
-    interface CapabilityStatement extends DomainResource {
+    export interface CapabilityStatement extends DomainResource {
         /**
          * Logical URI to reference this capability statement (globally unique)
          */
@@ -3533,7 +3533,7 @@ declare module fhir {
     /**
      * Action to occur as part of plan
      */
-    interface CarePlanActivity extends BackboneElement {
+    export interface CarePlanActivity extends BackboneElement {
         /**
          * Results of the activity
          */
@@ -3558,7 +3558,7 @@ declare module fhir {
     /**
      * In-line definition of activity
      */
-    interface CarePlanActivityDetail extends BackboneElement {
+    export interface CarePlanActivityDetail extends BackboneElement {
         /**
          * diet | drug | encounter | observation | procedure | supply | other
          */
@@ -3659,7 +3659,7 @@ declare module fhir {
     /**
      * Healthcare plan for patient or group
      */
-    interface CarePlan extends DomainResource {
+    export interface CarePlan extends DomainResource {
         /**
          * External Ids for this plan
          */
@@ -3760,7 +3760,7 @@ declare module fhir {
     /**
      * Members of the team
      */
-    interface CareTeamParticipant extends BackboneElement {
+    export interface CareTeamParticipant extends BackboneElement {
         /**
          * Type of involvement
          */
@@ -3781,7 +3781,7 @@ declare module fhir {
     /**
      * Planned participants in the coordination and delivery of care for a patient or group
      */
-    interface CareTeam extends DomainResource {
+    export interface CareTeam extends DomainResource {
         /**
          * External Ids for this team
          */
@@ -3842,7 +3842,7 @@ declare module fhir {
     /**
      * Who performed charged service
      */
-    interface ChargeItemParticipant extends BackboneElement {
+    export interface ChargeItemParticipant extends BackboneElement {
         /**
          * What type of performance was done
          */
@@ -3855,7 +3855,7 @@ declare module fhir {
     /**
      * Item containing charge code(s) associated with the provision of healthcare provider products
      */
-    interface ChargeItem extends DomainResource {
+    export interface ChargeItem extends DomainResource {
         /**
          * Business Identifier for item
          */
@@ -3984,7 +3984,7 @@ declare module fhir {
     /**
      * Related Claims which may be revelant to processing this claimn
      */
-    interface ClaimRelated extends BackboneElement {
+    export interface ClaimRelated extends BackboneElement {
         /**
          * Reference to the related claim
          */
@@ -4001,7 +4001,7 @@ declare module fhir {
     /**
      * Party to be paid any benefits payable
      */
-    interface ClaimPayee extends BackboneElement {
+    export interface ClaimPayee extends BackboneElement {
         /**
          * Type of party: Subscriber, Provider, other
          */
@@ -4018,7 +4018,7 @@ declare module fhir {
     /**
      * Members of the care team
      */
-    interface ClaimCareTeam extends BackboneElement {
+    export interface ClaimCareTeam extends BackboneElement {
         /**
          * Number to covey order of careTeam
          */
@@ -4051,7 +4051,7 @@ declare module fhir {
     /**
      * Exceptions, special considerations, the condition, situation, prior or concurrent issues
      */
-    interface ClaimInformation extends BackboneElement {
+    export interface ClaimInformation extends BackboneElement {
         /**
          * Information instance identifier
          */
@@ -4108,7 +4108,7 @@ declare module fhir {
     /**
      * List of Diagnosis
      */
-    interface ClaimDiagnosis extends BackboneElement {
+    export interface ClaimDiagnosis extends BackboneElement {
         /**
          * Number to covey order of diagnosis
          */
@@ -4137,7 +4137,7 @@ declare module fhir {
     /**
      * Procedures performed
      */
-    interface ClaimProcedure extends BackboneElement {
+    export interface ClaimProcedure extends BackboneElement {
         /**
          * Procedure sequence for reference
          */
@@ -4166,7 +4166,7 @@ declare module fhir {
     /**
      * Insurance or medical plan
      */
-    interface ClaimInsurance extends BackboneElement {
+    export interface ClaimInsurance extends BackboneElement {
         /**
          * Service instance identifier
          */
@@ -4211,7 +4211,7 @@ declare module fhir {
     /**
      * Details about an accident
      */
-    interface ClaimAccident extends BackboneElement {
+    export interface ClaimAccident extends BackboneElement {
         /**
          * When the accident occurred
          * see information codes
@@ -4238,7 +4238,7 @@ declare module fhir {
     /**
      * Goods and Services
      */
-    interface ClaimItem extends BackboneElement {
+    export interface ClaimItem extends BackboneElement {
         /**
          * Service instance
          */
@@ -4367,7 +4367,7 @@ declare module fhir {
     /**
      * Additional items
      */
-    interface ClaimItemDetail extends BackboneElement {
+    export interface ClaimItemDetail extends BackboneElement {
         /**
          * Service instance
          */
@@ -4428,7 +4428,7 @@ declare module fhir {
     /**
      * Additional items
      */
-    interface ClaimItemDetailSubDetail extends BackboneElement {
+    export interface ClaimItemDetailSubDetail extends BackboneElement {
         /**
          * Service instance
          */
@@ -4485,7 +4485,7 @@ declare module fhir {
     /**
      * Claim, Pre-determination or Pre-authorization
      */
-    interface Claim extends DomainResource {
+    export interface Claim extends DomainResource {
         /**
          * Claim number
          */
@@ -4622,7 +4622,7 @@ declare module fhir {
     /**
      * Line items
      */
-    interface ClaimResponseItem extends BackboneElement {
+    export interface ClaimResponseItem extends BackboneElement {
         /**
          * Service instance
          */
@@ -4651,7 +4651,7 @@ declare module fhir {
     /**
      * Adjudication details
      */
-    interface ClaimResponseItemAdjudication extends BackboneElement {
+    export interface ClaimResponseItemAdjudication extends BackboneElement {
         /**
          * Adjudication category such as co-pay, eligible, benefit, etc.
          */
@@ -4676,7 +4676,7 @@ declare module fhir {
     /**
      * Detail line items
      */
-    interface ClaimResponseItemDetail extends BackboneElement {
+    export interface ClaimResponseItemDetail extends BackboneElement {
         /**
          * Service instance
          */
@@ -4705,7 +4705,7 @@ declare module fhir {
     /**
      * Subdetail line items
      */
-    interface ClaimResponseItemDetailSubDetail extends BackboneElement {
+    export interface ClaimResponseItemDetailSubDetail extends BackboneElement {
         /**
          * Service instance
          */
@@ -4730,7 +4730,7 @@ declare module fhir {
     /**
      * Insurer added line items
      */
-    interface ClaimResponseAddItem extends BackboneElement {
+    export interface ClaimResponseAddItem extends BackboneElement {
         /**
          * Service instances
          */
@@ -4779,7 +4779,7 @@ declare module fhir {
     /**
      * Added items details
      */
-    interface ClaimResponseAddItemDetail extends BackboneElement {
+    export interface ClaimResponseAddItemDetail extends BackboneElement {
         /**
          * Revenue or cost center code
          */
@@ -4816,7 +4816,7 @@ declare module fhir {
     /**
      * Processing errors
      */
-    interface ClaimResponseError extends BackboneElement {
+    export interface ClaimResponseError extends BackboneElement {
         /**
          * Item sequence number
          */
@@ -4849,7 +4849,7 @@ declare module fhir {
     /**
      * Payment details, if paid
      */
-    interface ClaimResponsePayment extends BackboneElement {
+    export interface ClaimResponsePayment extends BackboneElement {
         /**
          * Partial or Complete
          */
@@ -4882,7 +4882,7 @@ declare module fhir {
     /**
      * Processing notes
      */
-    interface ClaimResponseProcessNote extends BackboneElement {
+    export interface ClaimResponseProcessNote extends BackboneElement {
         /**
          * Sequence Number for this note
          */
@@ -4911,7 +4911,7 @@ declare module fhir {
     /**
      * Insurance or medical plan
      */
-    interface ClaimResponseInsurance extends BackboneElement {
+    export interface ClaimResponseInsurance extends BackboneElement {
         /**
          * Service instance identifier
          */
@@ -4956,7 +4956,7 @@ declare module fhir {
     /**
      * Remittance resource
      */
-    interface ClaimResponse extends DomainResource {
+    export interface ClaimResponse extends DomainResource {
         /**
          * Response  number
          */
@@ -5065,7 +5065,7 @@ declare module fhir {
     /**
      * One or more sets of investigations (signs, symptions, etc.)
      */
-    interface ClinicalImpressionInvestigation extends BackboneElement {
+    export interface ClinicalImpressionInvestigation extends BackboneElement {
         /**
          * A name/code for the set
          */
@@ -5078,7 +5078,7 @@ declare module fhir {
     /**
      * Possible or likely findings and diagnoses
      */
-    interface ClinicalImpressionFinding extends BackboneElement {
+    export interface ClinicalImpressionFinding extends BackboneElement {
         /**
          * What was found
          */
@@ -5099,7 +5099,7 @@ declare module fhir {
     /**
      * A clinical assessment performed when planning treatments and management strategies for a patient
      */
-    interface ClinicalImpression extends DomainResource {
+    export interface ClinicalImpression extends DomainResource {
         /**
          * Business identifier
          */
@@ -5208,7 +5208,7 @@ declare module fhir {
     /**
      * Filter that can be used in a value set
      */
-    interface CodeSystemFilter extends BackboneElement {
+    export interface CodeSystemFilter extends BackboneElement {
         /**
          * Code that identifies the filter
          */
@@ -5245,7 +5245,7 @@ declare module fhir {
     /**
      * Additional information supplied about each concept
      */
-    interface CodeSystemProperty extends BackboneElement {
+    export interface CodeSystemProperty extends BackboneElement {
         /**
          * Identifies the property on the concepts, and when referred to in operations
          */
@@ -5282,7 +5282,7 @@ declare module fhir {
     /**
      * Concepts in the code system
      */
-    interface CodeSystemConcept extends BackboneElement {
+    export interface CodeSystemConcept extends BackboneElement {
         /**
          * Code that identifies concept
          */
@@ -5323,7 +5323,7 @@ declare module fhir {
     /**
      * Additional representations for the concept
      */
-    interface CodeSystemConceptDesignation extends BackboneElement {
+    export interface CodeSystemConceptDesignation extends BackboneElement {
         /**
          * Human language of the designation
          */
@@ -5348,7 +5348,7 @@ declare module fhir {
     /**
      * Property value for the concept
      */
-    interface CodeSystemConceptProperty extends BackboneElement {
+    export interface CodeSystemConceptProperty extends BackboneElement {
         /**
          * Reference to CodeSystem.property.code
          */
@@ -5405,7 +5405,7 @@ declare module fhir {
     /**
      * A set of codes drawn from one or more code systems
      */
-    interface CodeSystem extends DomainResource {
+    export interface CodeSystem extends DomainResource {
         /**
          * Logical URI to reference this code system (globally unique) (Coding.system)
          */
@@ -5582,7 +5582,7 @@ declare module fhir {
     /**
      * Message payload
      */
-    interface CommunicationPayload extends BackboneElement {
+    export interface CommunicationPayload extends BackboneElement {
         /**
          * Message part content
          */
@@ -5603,7 +5603,7 @@ declare module fhir {
     /**
      * A record of information transmitted from a sender to a receiver
      */
-    interface Communication extends DomainResource {
+    export interface Communication extends DomainResource {
         /**
          * Unique identifier
          */
@@ -5704,7 +5704,7 @@ declare module fhir {
     /**
      * Message payload
      */
-    interface CommunicationRequestPayload extends BackboneElement {
+    export interface CommunicationRequestPayload extends BackboneElement {
         /**
          * Message part content
          */
@@ -5725,7 +5725,7 @@ declare module fhir {
     /**
      * Who/what is requesting service
      */
-    interface CommunicationRequestRequester extends BackboneElement {
+    export interface CommunicationRequestRequester extends BackboneElement {
         /**
          * Individual making the request
          */
@@ -5738,7 +5738,7 @@ declare module fhir {
     /**
      * A request for information to be sent to a receiver
      */
-    interface CommunicationRequest extends DomainResource {
+    export interface CommunicationRequest extends DomainResource {
         /**
          * Unique identifier
          */
@@ -5843,7 +5843,7 @@ declare module fhir {
     /**
      * How a resource is related to the compartment
      */
-    interface CompartmentDefinitionResource extends BackboneElement {
+    export interface CompartmentDefinitionResource extends BackboneElement {
         /**
          * Name of resource type
          */
@@ -5872,7 +5872,7 @@ declare module fhir {
     /**
      * Compartment Definition for a resource
      */
-    interface CompartmentDefinition extends DomainResource {
+    export interface CompartmentDefinition extends DomainResource {
         /**
          * Logical URI to reference this compartment definition (globally unique)
          */
@@ -5981,7 +5981,7 @@ declare module fhir {
     /**
      * Attests to accuracy of composition
      */
-    interface CompositionAttester extends BackboneElement {
+    export interface CompositionAttester extends BackboneElement {
         /**
          * personal | professional | legal | official
          */
@@ -6006,7 +6006,7 @@ declare module fhir {
     /**
      * Relationships to other compositions/documents
      */
-    interface CompositionRelatesTo extends BackboneElement {
+    export interface CompositionRelatesTo extends BackboneElement {
         /**
          * replaces | transforms | signs | appends
          */
@@ -6027,7 +6027,7 @@ declare module fhir {
     /**
      * The clinical service(s) being documented
      */
-    interface CompositionEvent extends BackboneElement {
+    export interface CompositionEvent extends BackboneElement {
         /**
          * Code(s) that apply to the event being documented
          */
@@ -6044,7 +6044,7 @@ declare module fhir {
     /**
      * Composition is broken into sections
      */
-    interface CompositionSection extends BackboneElement {
+    export interface CompositionSection extends BackboneElement {
         /**
          * Label for section (e.g. for ToC)
          */
@@ -6089,7 +6089,7 @@ declare module fhir {
     /**
      * A set of resources composed into a single coherent clinical statement with clinical attestation
      */
-    interface Composition extends DomainResource {
+    export interface Composition extends DomainResource {
         /**
          * Logical identifier of composition (version-independent)
          */
@@ -6170,7 +6170,7 @@ declare module fhir {
     /**
      * Same source and target systems
      */
-    interface ConceptMapGroup extends BackboneElement {
+    export interface ConceptMapGroup extends BackboneElement {
         /**
          * Code System (if value set crosses code systems)
          */
@@ -6215,7 +6215,7 @@ declare module fhir {
     /**
      * Mappings for a concept from the source set
      */
-    interface ConceptMapGroupElement extends BackboneElement {
+    export interface ConceptMapGroupElement extends BackboneElement {
         /**
          * Identifies element being mapped
          */
@@ -6240,7 +6240,7 @@ declare module fhir {
     /**
      * Concept in target system for element
      */
-    interface ConceptMapGroupElementTarget extends BackboneElement {
+    export interface ConceptMapGroupElementTarget extends BackboneElement {
         /**
          * Code that identifies the target element
          */
@@ -6285,7 +6285,7 @@ declare module fhir {
     /**
      * Other elements required for this mapping (from context)
      */
-    interface ConceptMapGroupElementTargetDependsOn extends BackboneElement {
+    export interface ConceptMapGroupElementTargetDependsOn extends BackboneElement {
         /**
          * Reference to property mapping depends on
          */
@@ -6322,7 +6322,7 @@ declare module fhir {
     /**
      * When no match in the mappings
      */
-    interface ConceptMapGroupUnmapped extends BackboneElement {
+    export interface ConceptMapGroupUnmapped extends BackboneElement {
         /**
          * provided | fixed | other-map
          */
@@ -6359,7 +6359,7 @@ declare module fhir {
     /**
      * A map from one set of concepts to one or more other concepts
      */
-    interface ConceptMap extends DomainResource {
+    export interface ConceptMap extends DomainResource {
         /**
          * Logical URI to reference this concept map (globally unique)
          */
@@ -6496,7 +6496,7 @@ declare module fhir {
     /**
      * Stage/grade, usually assessed formally
      */
-    interface ConditionStage extends BackboneElement {
+    export interface ConditionStage extends BackboneElement {
         /**
          * Simple summary (disease specific)
          */
@@ -6509,7 +6509,7 @@ declare module fhir {
     /**
      * Supporting evidence
      */
-    interface ConditionEvidence extends BackboneElement {
+    export interface ConditionEvidence extends BackboneElement {
         /**
          * Manifestation/symptom
          */
@@ -6522,7 +6522,7 @@ declare module fhir {
     /**
      * Detailed information about conditions, problems or diagnoses
      */
-    interface Condition extends DomainResource {
+    export interface Condition extends DomainResource {
         /**
          * External Ids for this condition
          */
@@ -6659,7 +6659,7 @@ declare module fhir {
     /**
      * Who|what controlled by this consent (or group, by role)
      */
-    interface ConsentActor extends BackboneElement {
+    export interface ConsentActor extends BackboneElement {
         /**
          * How the actor is involved
          */
@@ -6672,7 +6672,7 @@ declare module fhir {
     /**
      * Policies covered by this consent
      */
-    interface ConsentPolicy extends BackboneElement {
+    export interface ConsentPolicy extends BackboneElement {
         /**
          * Enforcement source for policy
          */
@@ -6693,7 +6693,7 @@ declare module fhir {
     /**
      * Data controlled by this consent
      */
-    interface ConsentData extends BackboneElement {
+    export interface ConsentData extends BackboneElement {
         /**
          * instance | related | dependents | authoredby
          */
@@ -6710,7 +6710,7 @@ declare module fhir {
     /**
      * Additional rule -  addition or removal of permissions
      */
-    interface ConsentExcept extends BackboneElement {
+    export interface ConsentExcept extends BackboneElement {
         /**
          * deny | permit
          */
@@ -6759,7 +6759,7 @@ declare module fhir {
     /**
      * Who|what controlled by this exception (or group, by role)
      */
-    interface ConsentExceptActor extends BackboneElement {
+    export interface ConsentExceptActor extends BackboneElement {
         /**
          * How the actor is involved
          */
@@ -6772,7 +6772,7 @@ declare module fhir {
     /**
      * Data controlled by this exception
      */
-    interface ConsentExceptData extends BackboneElement {
+    export interface ConsentExceptData extends BackboneElement {
         /**
          * instance | related | dependents | authoredby
          */
@@ -6789,7 +6789,7 @@ declare module fhir {
     /**
      * A healthcare consumer's policy choices to permits or denies recipients or roles to perform actions for specific purposes and periods of time
      */
-    interface Consent extends DomainResource {
+    export interface Consent extends DomainResource {
         /**
          * Identifier for this record (external references)
          */
@@ -6886,7 +6886,7 @@ declare module fhir {
     /**
      * Entity being ascribed responsibility
      */
-    interface ContractAgent extends BackboneElement {
+    export interface ContractAgent extends BackboneElement {
         /**
          * Contract Agent Type
          */
@@ -6899,7 +6899,7 @@ declare module fhir {
     /**
      * Contract Signatory
      */
-    interface ContractSigner extends BackboneElement {
+    export interface ContractSigner extends BackboneElement {
         /**
          * Contract Signatory Role
          */
@@ -6916,7 +6916,7 @@ declare module fhir {
     /**
      * Contract Valued Item List
      */
-    interface ContractValuedItem extends BackboneElement {
+    export interface ContractValuedItem extends BackboneElement {
         /**
          * Contract Valued Item Type
          */
@@ -6969,7 +6969,7 @@ declare module fhir {
     /**
      * Contract Term List
      */
-    interface ContractTerm extends BackboneElement {
+    export interface ContractTerm extends BackboneElement {
         /**
          * Contract Term Number
          */
@@ -7034,7 +7034,7 @@ declare module fhir {
     /**
      * Contract Term Agent List
      */
-    interface ContractTermAgent extends BackboneElement {
+    export interface ContractTermAgent extends BackboneElement {
         /**
          * Contract Term Agent Subject
          */
@@ -7047,7 +7047,7 @@ declare module fhir {
     /**
      * Contract Term Valued Item List
      */
-    interface ContractTermValuedItem extends BackboneElement {
+    export interface ContractTermValuedItem extends BackboneElement {
         /**
          * Contract Term Valued Item Type
          */
@@ -7100,7 +7100,7 @@ declare module fhir {
     /**
      * Contract Friendly Language
      */
-    interface ContractFriendly extends BackboneElement {
+    export interface ContractFriendly extends BackboneElement {
         /**
          * Easily comprehended representation of this Contract
          */
@@ -7113,7 +7113,7 @@ declare module fhir {
     /**
      * Contract Legal Language
      */
-    interface ContractLegal extends BackboneElement {
+    export interface ContractLegal extends BackboneElement {
         /**
          * Contract Legal Text
          */
@@ -7126,7 +7126,7 @@ declare module fhir {
     /**
      * Computable Contract Language
      */
-    interface ContractRule extends BackboneElement {
+    export interface ContractRule extends BackboneElement {
         /**
          * Computable Contract Rules
          */
@@ -7139,7 +7139,7 @@ declare module fhir {
     /**
      * Legal Agreement
      */
-    interface Contract extends DomainResource {
+    export interface Contract extends DomainResource {
         /**
          * Contract number
          */
@@ -7248,7 +7248,7 @@ declare module fhir {
     /**
      * Additional coverage classifications
      */
-    interface CoverageGrouping extends BackboneElement {
+    export interface CoverageGrouping extends BackboneElement {
         /**
          * An identifier for the group
          */
@@ -7349,7 +7349,7 @@ declare module fhir {
     /**
      * Insurance or medical plan or a payment agreement
      */
-    interface Coverage extends DomainResource {
+    export interface Coverage extends DomainResource {
         /**
          * The primary coverage ID
          */
@@ -7442,7 +7442,7 @@ declare module fhir {
     /**
      * External specification mapped to
      */
-    interface DataElementMapping extends BackboneElement {
+    export interface DataElementMapping extends BackboneElement {
         /**
          * Internal id when this mapping is used
          */
@@ -7479,7 +7479,7 @@ declare module fhir {
     /**
      * This element is sliced - slices follow
      */
-    interface ElementDefinitionSlicing extends Element {
+    export interface ElementDefinitionSlicing extends Element {
         /**
          * Element values that are used to distinguish the slices
          */
@@ -7512,7 +7512,7 @@ declare module fhir {
     /**
      * Element values that are used to distinguish the slices
      */
-    interface ElementDefinitionSlicingDiscriminator extends Element {
+    export interface ElementDefinitionSlicingDiscriminator extends Element {
         /**
          * value | exists | pattern | type | profile
          */
@@ -7533,7 +7533,7 @@ declare module fhir {
     /**
      * Base definition information for tools
      */
-    interface ElementDefinitionBase extends Element {
+    export interface ElementDefinitionBase extends Element {
         /**
          * Path that identifies the base element
          */
@@ -7562,7 +7562,7 @@ declare module fhir {
     /**
      * Data type and Profile for this element
      */
-    interface ElementDefinitionType extends Element {
+    export interface ElementDefinitionType extends Element {
         /**
          * Data type or Resource (reference to definition)
          */
@@ -7607,7 +7607,7 @@ declare module fhir {
     /**
      * Example value (as defined for type)
      */
-    interface ElementDefinitionExample extends Element {
+    export interface ElementDefinitionExample extends Element {
         /**
          * Describes the purpose of this example
          */
@@ -7836,7 +7836,7 @@ declare module fhir {
     /**
      * Condition that must evaluate to true
      */
-    interface ElementDefinitionConstraint extends Element {
+    export interface ElementDefinitionConstraint extends Element {
         /**
          * Target of 'condition' reference above
          */
@@ -7897,7 +7897,7 @@ declare module fhir {
     /**
      * ValueSet details if this is coded
      */
-    interface ElementDefinitionBinding extends Element {
+    export interface ElementDefinitionBinding extends Element {
         /**
          * required | extensible | preferred | example
          */
@@ -7930,7 +7930,7 @@ declare module fhir {
     /**
      * Map element to another set of definitions
      */
-    interface ElementDefinitionMapping extends Element {
+    export interface ElementDefinitionMapping extends Element {
         /**
          * Reference to mapping declaration
          */
@@ -7967,7 +7967,7 @@ declare module fhir {
     /**
      * Definition of an element in a resource or extension
      */
-    interface ElementDefinition extends Element {
+    export interface ElementDefinition extends Element {
         /**
          * Path of the element in the hierarchy of elements
          */
@@ -8940,7 +8940,7 @@ declare module fhir {
     /**
      * Resource data element
      */
-    interface DataElement extends DomainResource {
+    export interface DataElement extends DomainResource {
         /**
          * Logical URI to reference this data element (globally unique)
          */
@@ -9049,7 +9049,7 @@ declare module fhir {
     /**
      * Step taken to address
      */
-    interface DetectedIssueMitigation extends BackboneElement {
+    export interface DetectedIssueMitigation extends BackboneElement {
         /**
          * What mitigation?
          */
@@ -9070,7 +9070,7 @@ declare module fhir {
     /**
      * Clinical issue with action
      */
-    interface DetectedIssue extends DomainResource {
+    export interface DetectedIssue extends DomainResource {
         /**
          * Unique id for the detected issue
          */
@@ -9139,7 +9139,7 @@ declare module fhir {
     /**
      * Unique Device Identifier (UDI) Barcode string
      */
-    interface DeviceUdi extends BackboneElement {
+    export interface DeviceUdi extends BackboneElement {
         /**
          * Mandatory fixed portion of UDI
          */
@@ -9200,7 +9200,7 @@ declare module fhir {
     /**
      * Item used in healthcare
      */
-    interface Device extends DomainResource {
+    export interface Device extends DomainResource {
         /**
          * Instance identifier
          */
@@ -9305,7 +9305,7 @@ declare module fhir {
     /**
      * Specification details such as Component Revisions, or Serial Numbers
      */
-    interface DeviceComponentProductionSpecification extends BackboneElement {
+    export interface DeviceComponentProductionSpecification extends BackboneElement {
         /**
          * Type or kind of production specification, for example serial number or software revision
          */
@@ -9326,7 +9326,7 @@ declare module fhir {
     /**
      * An instance of a medical-related component of a medical device
      */
-    interface DeviceComponent extends DomainResource {
+    export interface DeviceComponent extends DomainResource {
         /**
          * Instance id assigned by the software stack
          */
@@ -9379,7 +9379,7 @@ declare module fhir {
     /**
      * Describes the calibrations that have been performed or that are required to be performed
      */
-    interface DeviceMetricCalibration extends BackboneElement {
+    export interface DeviceMetricCalibration extends BackboneElement {
         /**
          * unspecified | offset | gain | two-point
          */
@@ -9408,7 +9408,7 @@ declare module fhir {
     /**
      * Measurement, calculation or setting capability of a medical device
      */
-    interface DeviceMetric extends DomainResource {
+    export interface DeviceMetric extends DomainResource {
         /**
          * Unique identifier of this DeviceMetric
          */
@@ -9465,7 +9465,7 @@ declare module fhir {
     /**
      * Who/what is requesting diagnostics
      */
-    interface DeviceRequestRequester extends BackboneElement {
+    export interface DeviceRequestRequester extends BackboneElement {
         /**
          * Individual making the request
          */
@@ -9478,7 +9478,7 @@ declare module fhir {
     /**
      * Medical device request
      */
-    interface DeviceRequest extends DomainResource {
+    export interface DeviceRequest extends DomainResource {
         /**
          * External Request identifier
          */
@@ -9595,7 +9595,7 @@ declare module fhir {
     /**
      * Record of use of a device
      */
-    interface DeviceUseStatement extends DomainResource {
+    export interface DeviceUseStatement extends DomainResource {
         /**
          * External identifier for this record
          */
@@ -9664,7 +9664,7 @@ declare module fhir {
     /**
      * Participants in producing the report
      */
-    interface DiagnosticReportPerformer extends BackboneElement {
+    export interface DiagnosticReportPerformer extends BackboneElement {
         /**
          * Type of performer
          */
@@ -9677,7 +9677,7 @@ declare module fhir {
     /**
      * Key images associated with this report
      */
-    interface DiagnosticReportImage extends BackboneElement {
+    export interface DiagnosticReportImage extends BackboneElement {
         /**
          * Comment about the image (e.g. explanation)
          */
@@ -9694,7 +9694,7 @@ declare module fhir {
     /**
      * A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports
      */
-    interface DiagnosticReport extends DomainResource {
+    export interface DiagnosticReport extends DomainResource {
         /**
          * Business identifier for report
          */
@@ -9787,7 +9787,7 @@ declare module fhir {
     /**
      * The items included
      */
-    interface DocumentManifestContent extends BackboneElement {
+    export interface DocumentManifestContent extends BackboneElement {
         /**
          * Contents of this set of documents
          */
@@ -9800,7 +9800,7 @@ declare module fhir {
     /**
      * Related things
      */
-    interface DocumentManifestRelated extends BackboneElement {
+    export interface DocumentManifestRelated extends BackboneElement {
         /**
          * Identifiers of things that are related
          */
@@ -9813,7 +9813,7 @@ declare module fhir {
     /**
      * A list that defines a set of documents
      */
-    interface DocumentManifest extends DomainResource {
+    export interface DocumentManifest extends DomainResource {
         /**
          * Unique Identifier for the set of documents
          */
@@ -9882,7 +9882,7 @@ declare module fhir {
     /**
      * Relationships to other documents
      */
-    interface DocumentReferenceRelatesTo extends BackboneElement {
+    export interface DocumentReferenceRelatesTo extends BackboneElement {
         /**
          * replaces | transforms | signs | appends
          */
@@ -9899,7 +9899,7 @@ declare module fhir {
     /**
      * Document referenced
      */
-    interface DocumentReferenceContent extends BackboneElement {
+    export interface DocumentReferenceContent extends BackboneElement {
         /**
          * Where to access the document
          */
@@ -9912,7 +9912,7 @@ declare module fhir {
     /**
      * Clinical context of document
      */
-    interface DocumentReferenceContext extends BackboneElement {
+    export interface DocumentReferenceContext extends BackboneElement {
         /**
          * Context of the document  content
          */
@@ -9945,7 +9945,7 @@ declare module fhir {
     /**
      * Related identifiers or resources
      */
-    interface DocumentReferenceContextRelated extends BackboneElement {
+    export interface DocumentReferenceContextRelated extends BackboneElement {
         /**
          * Identifier of related objects or events
          */
@@ -9958,7 +9958,7 @@ declare module fhir {
     /**
      * A reference to a document
      */
-    interface DocumentReference extends DomainResource {
+    export interface DocumentReference extends DomainResource {
         /**
          * Master Version Specific Identifier
          */
@@ -10051,7 +10051,7 @@ declare module fhir {
     /**
      * Determine insurance validity and scope of coverage
      */
-    interface EligibilityRequest extends DomainResource {
+    export interface EligibilityRequest extends DomainResource {
         /**
          * Business Identifier
          */
@@ -10136,7 +10136,7 @@ declare module fhir {
     /**
      * Details by insurance coverage
      */
-    interface EligibilityResponseInsurance extends BackboneElement {
+    export interface EligibilityResponseInsurance extends BackboneElement {
         /**
          * Updated Coverage details
          */
@@ -10153,7 +10153,7 @@ declare module fhir {
     /**
      * Benefits by Category
      */
-    interface EligibilityResponseInsuranceBenefitBalance extends BackboneElement {
+    export interface EligibilityResponseInsuranceBenefitBalance extends BackboneElement {
         /**
          * Type of services covered
          */
@@ -10206,7 +10206,7 @@ declare module fhir {
     /**
      * Benefit Summary
      */
-    interface EligibilityResponseInsuranceBenefitBalanceFinancial extends BackboneElement {
+    export interface EligibilityResponseInsuranceBenefitBalanceFinancial extends BackboneElement {
         /**
          * Deductable, visits, benefit amount
          */
@@ -10247,7 +10247,7 @@ declare module fhir {
     /**
      * Processing errors
      */
-    interface EligibilityResponseError extends BackboneElement {
+    export interface EligibilityResponseError extends BackboneElement {
         /**
          * Error code detailing processing issues
          */
@@ -10256,7 +10256,7 @@ declare module fhir {
     /**
      * EligibilityResponse resource
      */
-    interface EligibilityResponse extends DomainResource {
+    export interface EligibilityResponse extends DomainResource {
         /**
          * Business Identifier
          */
@@ -10329,7 +10329,7 @@ declare module fhir {
     /**
      * List of past encounter statuses
      */
-    interface EncounterStatusHistory extends BackboneElement {
+    export interface EncounterStatusHistory extends BackboneElement {
         /**
          * planned | arrived | triaged | in-progress | onleave | finished | cancelled +
          */
@@ -10346,7 +10346,7 @@ declare module fhir {
     /**
      * List of past encounter classes
      */
-    interface EncounterClassHistory extends BackboneElement {
+    export interface EncounterClassHistory extends BackboneElement {
         /**
          * inpatient | outpatient | ambulatory | emergency +
          */
@@ -10359,7 +10359,7 @@ declare module fhir {
     /**
      * List of participants involved in the encounter
      */
-    interface EncounterParticipant extends BackboneElement {
+    export interface EncounterParticipant extends BackboneElement {
         /**
          * Role of participant in encounter
          */
@@ -10376,7 +10376,7 @@ declare module fhir {
     /**
      * The list of diagnosis relevant to this encounter
      */
-    interface EncounterDiagnosis extends BackboneElement {
+    export interface EncounterDiagnosis extends BackboneElement {
         /**
          * Reason the encounter takes place (resource)
          */
@@ -10397,7 +10397,7 @@ declare module fhir {
     /**
      * Details about the admission to a healthcare service
      */
-    interface EncounterHospitalization extends BackboneElement {
+    export interface EncounterHospitalization extends BackboneElement {
         /**
          * Pre-admission identifier
          */
@@ -10438,7 +10438,7 @@ declare module fhir {
     /**
      * List of locations where the patient has been
      */
-    interface EncounterLocation extends BackboneElement {
+    export interface EncounterLocation extends BackboneElement {
         /**
          * Location the encounter takes place
          */
@@ -10459,7 +10459,7 @@ declare module fhir {
     /**
      * An interaction during which services are provided to the patient
      */
-    interface Encounter extends DomainResource {
+    export interface Encounter extends DomainResource {
         /**
          * Identifier(s) by which this encounter is known
          */
@@ -10552,7 +10552,7 @@ declare module fhir {
     /**
      * The technical details of an endpoint that can be used for electronic services
      */
-    interface Endpoint extends DomainResource {
+    export interface Endpoint extends DomainResource {
         /**
          * Identifies this endpoint across multiple systems
          */
@@ -10621,7 +10621,7 @@ declare module fhir {
     /**
      * Enrollment request
      */
-    interface EnrollmentRequest extends DomainResource {
+    export interface EnrollmentRequest extends DomainResource {
         /**
          * Business Identifier
          */
@@ -10666,7 +10666,7 @@ declare module fhir {
     /**
      * EnrollmentResponse resource
      */
-    interface EnrollmentResponse extends DomainResource {
+    export interface EnrollmentResponse extends DomainResource {
         /**
          * Business Identifier
          */
@@ -10719,7 +10719,7 @@ declare module fhir {
     /**
      * Past list of status codes (the current status may be included to cover the start date of the status)
      */
-    interface EpisodeOfCareStatusHistory extends BackboneElement {
+    export interface EpisodeOfCareStatusHistory extends BackboneElement {
         /**
          * planned | waitlist | active | onhold | finished | cancelled | entered-in-error
          */
@@ -10736,7 +10736,7 @@ declare module fhir {
     /**
      * The list of diagnosis relevant to this episode of care
      */
-    interface EpisodeOfCareDiagnosis extends BackboneElement {
+    export interface EpisodeOfCareDiagnosis extends BackboneElement {
         /**
          * Conditions/problems/diagnoses this episode of care is for
          */
@@ -10757,7 +10757,7 @@ declare module fhir {
     /**
      * An association of a Patient with an Organization and  Healthcare Provider(s) for a period of time that the Organization assumes some level of responsibility
      */
-    interface EpisodeOfCare extends DomainResource {
+    export interface EpisodeOfCare extends DomainResource {
         /**
          * Business Identifier(s) relevant for this EpisodeOfCare
          */
@@ -10814,7 +10814,7 @@ declare module fhir {
     /**
      * Fix use of a code system to a particular version
      */
-    interface ExpansionProfileFixedVersion extends BackboneElement {
+    export interface ExpansionProfileFixedVersion extends BackboneElement {
         /**
          * System to have its version fixed
          */
@@ -10843,7 +10843,7 @@ declare module fhir {
     /**
      * Systems/Versions to be exclude
      */
-    interface ExpansionProfileExcludedSystem extends BackboneElement {
+    export interface ExpansionProfileExcludedSystem extends BackboneElement {
         /**
          * The specific code system to be excluded
          */
@@ -10864,7 +10864,7 @@ declare module fhir {
     /**
      * When the expansion profile imposes designation contraints
      */
-    interface ExpansionProfileDesignation extends BackboneElement {
+    export interface ExpansionProfileDesignation extends BackboneElement {
         /**
          * Designations to be included
          */
@@ -10877,7 +10877,7 @@ declare module fhir {
     /**
      * Designations to be included
      */
-    interface ExpansionProfileDesignationInclude extends BackboneElement {
+    export interface ExpansionProfileDesignationInclude extends BackboneElement {
         /**
          * The designation to be included
          */
@@ -10886,7 +10886,7 @@ declare module fhir {
     /**
      * The designation to be included
      */
-    interface ExpansionProfileDesignationIncludeDesignation extends BackboneElement {
+    export interface ExpansionProfileDesignationIncludeDesignation extends BackboneElement {
         /**
          * Human language of the designation to be included
          */
@@ -10903,7 +10903,7 @@ declare module fhir {
     /**
      * Designations to be excluded
      */
-    interface ExpansionProfileDesignationExclude extends BackboneElement {
+    export interface ExpansionProfileDesignationExclude extends BackboneElement {
         /**
          * The designation to be excluded
          */
@@ -10912,7 +10912,7 @@ declare module fhir {
     /**
      * The designation to be excluded
      */
-    interface ExpansionProfileDesignationExcludeDesignation extends BackboneElement {
+    export interface ExpansionProfileDesignationExcludeDesignation extends BackboneElement {
         /**
          * Human language of the designation to be excluded
          */
@@ -10929,7 +10929,7 @@ declare module fhir {
     /**
      * Defines behaviour and contraints on the ValueSet Expansion operation
      */
-    interface ExpansionProfile extends DomainResource {
+    export interface ExpansionProfile extends DomainResource {
         /**
          * Logical URI to reference this expansion profile (globally unique)
          */
@@ -11055,7 +11055,7 @@ declare module fhir {
          */
         _excludeNested?: Element;
         /**
-         * Include or exclude codes which cannot be rendered in user interfaces in the value set expansion
+         * Include or exclude codes which cannot be rendered in user export interfaces in the value set expansion
          */
         excludeNotForUI?: boolean;
         /**
@@ -11090,7 +11090,7 @@ declare module fhir {
     /**
      * Related Claims which may be revelant to processing this claim
      */
-    interface ExplanationOfBenefitRelated extends BackboneElement {
+    export interface ExplanationOfBenefitRelated extends BackboneElement {
         /**
          * Reference to the related claim
          */
@@ -11107,7 +11107,7 @@ declare module fhir {
     /**
      * Party to be paid any benefits payable
      */
-    interface ExplanationOfBenefitPayee extends BackboneElement {
+    export interface ExplanationOfBenefitPayee extends BackboneElement {
         /**
          * Type of party: Subscriber, Provider, other
          */
@@ -11124,7 +11124,7 @@ declare module fhir {
     /**
      * Exceptions, special considerations, the condition, situation, prior or concurrent issues
      */
-    interface ExplanationOfBenefitInformation extends BackboneElement {
+    export interface ExplanationOfBenefitInformation extends BackboneElement {
         /**
          * Information instance identifier
          */
@@ -11181,7 +11181,7 @@ declare module fhir {
     /**
      * Care Team members
      */
-    interface ExplanationOfBenefitCareTeam extends BackboneElement {
+    export interface ExplanationOfBenefitCareTeam extends BackboneElement {
         /**
          * Number to covey order of careteam
          */
@@ -11214,7 +11214,7 @@ declare module fhir {
     /**
      * List of Diagnosis
      */
-    interface ExplanationOfBenefitDiagnosis extends BackboneElement {
+    export interface ExplanationOfBenefitDiagnosis extends BackboneElement {
         /**
          * Number to covey order of diagnosis
          */
@@ -11243,7 +11243,7 @@ declare module fhir {
     /**
      * Procedures performed
      */
-    interface ExplanationOfBenefitProcedure extends BackboneElement {
+    export interface ExplanationOfBenefitProcedure extends BackboneElement {
         /**
          * Procedure sequence for reference
          */
@@ -11272,7 +11272,7 @@ declare module fhir {
     /**
      * Insurance or medical plan
      */
-    interface ExplanationOfBenefitInsurance extends BackboneElement {
+    export interface ExplanationOfBenefitInsurance extends BackboneElement {
         /**
          * Insurance information
          */
@@ -11289,7 +11289,7 @@ declare module fhir {
     /**
      * Details of an accident
      */
-    interface ExplanationOfBenefitAccident extends BackboneElement {
+    export interface ExplanationOfBenefitAccident extends BackboneElement {
         /**
          * When the accident occurred
          */
@@ -11314,7 +11314,7 @@ declare module fhir {
     /**
      * Goods and Services
      */
-    interface ExplanationOfBenefitItem extends BackboneElement {
+    export interface ExplanationOfBenefitItem extends BackboneElement {
         /**
          * Service instance
          */
@@ -11455,7 +11455,7 @@ declare module fhir {
     /**
      * Adjudication details
      */
-    interface ExplanationOfBenefitItemAdjudication extends BackboneElement {
+    export interface ExplanationOfBenefitItemAdjudication extends BackboneElement {
         /**
          * Adjudication category such as co-pay, eligible, benefit, etc.
          */
@@ -11480,7 +11480,7 @@ declare module fhir {
     /**
      * Additional items
      */
-    interface ExplanationOfBenefitItemDetail extends BackboneElement {
+    export interface ExplanationOfBenefitItemDetail extends BackboneElement {
         /**
          * Service instance
          */
@@ -11557,7 +11557,7 @@ declare module fhir {
     /**
      * Additional items
      */
-    interface ExplanationOfBenefitItemDetailSubDetail extends BackboneElement {
+    export interface ExplanationOfBenefitItemDetailSubDetail extends BackboneElement {
         /**
          * Service instance
          */
@@ -11630,7 +11630,7 @@ declare module fhir {
     /**
      * Insurer added line items
      */
-    interface ExplanationOfBenefitAddItem extends BackboneElement {
+    export interface ExplanationOfBenefitAddItem extends BackboneElement {
         /**
          * Service instances
          */
@@ -11679,7 +11679,7 @@ declare module fhir {
     /**
      * Added items details
      */
-    interface ExplanationOfBenefitAddItemDetail extends BackboneElement {
+    export interface ExplanationOfBenefitAddItemDetail extends BackboneElement {
         /**
          * Revenue or cost center code
          */
@@ -11716,7 +11716,7 @@ declare module fhir {
     /**
      * Payment (if paid)
      */
-    interface ExplanationOfBenefitPayment extends BackboneElement {
+    export interface ExplanationOfBenefitPayment extends BackboneElement {
         /**
          * Partial or Complete
          */
@@ -11749,7 +11749,7 @@ declare module fhir {
     /**
      * Processing notes
      */
-    interface ExplanationOfBenefitProcessNote extends BackboneElement {
+    export interface ExplanationOfBenefitProcessNote extends BackboneElement {
         /**
          * Sequence number for this note
          */
@@ -11778,7 +11778,7 @@ declare module fhir {
     /**
      * Balance by Benefit Category
      */
-    interface ExplanationOfBenefitBenefitBalance extends BackboneElement {
+    export interface ExplanationOfBenefitBenefitBalance extends BackboneElement {
         /**
          * Type of services covered
          */
@@ -11831,7 +11831,7 @@ declare module fhir {
     /**
      * Benefit Summary
      */
-    interface ExplanationOfBenefitBenefitBalanceFinancial extends BackboneElement {
+    export interface ExplanationOfBenefitBenefitBalanceFinancial extends BackboneElement {
         /**
          * Deductable, visits, benefit amount
          */
@@ -11872,7 +11872,7 @@ declare module fhir {
     /**
      * Explanation of Benefit resource
      */
-    interface ExplanationOfBenefit extends DomainResource {
+    export interface ExplanationOfBenefit extends DomainResource {
         /**
          * Business Identifier
          */
@@ -12049,7 +12049,7 @@ declare module fhir {
     /**
      * Condition that the related person had
      */
-    interface FamilyMemberHistoryCondition extends BackboneElement {
+    export interface FamilyMemberHistoryCondition extends BackboneElement {
         /**
          * Condition suffered by relation
          */
@@ -12086,7 +12086,7 @@ declare module fhir {
     /**
      * Information about patient's relatives, relevant for patient
      */
-    interface FamilyMemberHistory extends DomainResource {
+    export interface FamilyMemberHistory extends DomainResource {
         /**
          * External Id(s) for this record
          */
@@ -12243,7 +12243,7 @@ declare module fhir {
     /**
      * Key information to flag to healthcare providers
      */
-    interface Flag extends DomainResource {
+    export interface Flag extends DomainResource {
         /**
          * Business identifier
          */
@@ -12284,7 +12284,7 @@ declare module fhir {
     /**
      * Target outcome for the goal
      */
-    interface GoalTarget extends BackboneElement {
+    export interface GoalTarget extends BackboneElement {
         /**
          * The parameter whose value is being tracked
          */
@@ -12317,7 +12317,7 @@ declare module fhir {
     /**
      * Describes the intended objective(s) for a patient, group or organization
      */
-    interface Goal extends DomainResource {
+    export interface Goal extends DomainResource {
         /**
          * External Ids for this goal
          */
@@ -12402,7 +12402,7 @@ declare module fhir {
     /**
      * Links this graph makes rules about
      */
-    interface GraphDefinitionLink extends BackboneElement {
+    export interface GraphDefinitionLink extends BackboneElement {
         /**
          * Path in the resource that contains the link
          */
@@ -12451,7 +12451,7 @@ declare module fhir {
     /**
      * Potential target for the link
      */
-    interface GraphDefinitionLinkTarget extends BackboneElement {
+    export interface GraphDefinitionLinkTarget extends BackboneElement {
         /**
          * Type of resource this link refers to
          */
@@ -12480,7 +12480,7 @@ declare module fhir {
     /**
      * Compartment Consistency Rules
      */
-    interface GraphDefinitionLinkTargetCompartment extends BackboneElement {
+    export interface GraphDefinitionLinkTargetCompartment extends BackboneElement {
         /**
          * Identifies the compartment
          */
@@ -12517,7 +12517,7 @@ declare module fhir {
     /**
      * Definition of an graph of resources
      */
-    interface GraphDefinition extends DomainResource {
+    export interface GraphDefinition extends DomainResource {
         /**
          * Logical URI to reference this graph definition (globally unique)
          */
@@ -12626,7 +12626,7 @@ declare module fhir {
     /**
      * Trait of group members
      */
-    interface GroupCharacteristic extends BackboneElement {
+    export interface GroupCharacteristic extends BackboneElement {
         /**
          * Kind of characteristic
          */
@@ -12667,7 +12667,7 @@ declare module fhir {
     /**
      * Who or what is in group
      */
-    interface GroupMember extends BackboneElement {
+    export interface GroupMember extends BackboneElement {
         /**
          * Reference to the group member
          */
@@ -12688,7 +12688,7 @@ declare module fhir {
     /**
      * Group of multiple entities
      */
-    interface Group extends DomainResource {
+    export interface Group extends DomainResource {
         /**
          * Unique id
          */
@@ -12749,7 +12749,7 @@ declare module fhir {
     /**
      * What codes are expected
      */
-    interface DataRequirementCodeFilter extends Element {
+    export interface DataRequirementCodeFilter extends Element {
         /**
          * The code-valued attribute of the filter
          */
@@ -12790,7 +12790,7 @@ declare module fhir {
     /**
      * What dates/date ranges are expected
      */
-    interface DataRequirementDateFilter extends Element {
+    export interface DataRequirementDateFilter extends Element {
         /**
          * The date-valued attribute of the filter
          */
@@ -12819,7 +12819,7 @@ declare module fhir {
     /**
      * Describes a required data item
      */
-    interface DataRequirement extends Element {
+    export interface DataRequirement extends Element {
         /**
          * The type of the required data
          */
@@ -12856,7 +12856,7 @@ declare module fhir {
     /**
      * The formal response to a guidance request
      */
-    interface GuidanceResponse extends DomainResource {
+    export interface GuidanceResponse extends DomainResource {
         /**
          * The id of the request associated with this response, if any
          */
@@ -12933,7 +12933,7 @@ declare module fhir {
     /**
      * Times the Service Site is available
      */
-    interface HealthcareServiceAvailableTime extends BackboneElement {
+    export interface HealthcareServiceAvailableTime extends BackboneElement {
         /**
          * mon | tue | wed | thu | fri | sat | sun
          */
@@ -12970,7 +12970,7 @@ declare module fhir {
     /**
      * Not available during this time due to provided reason
      */
-    interface HealthcareServiceNotAvailable extends BackboneElement {
+    export interface HealthcareServiceNotAvailable extends BackboneElement {
         /**
          * Reason presented to the user explaining why time not available
          */
@@ -12987,7 +12987,7 @@ declare module fhir {
     /**
      * The details of a healthcare service available at a location
      */
-    interface HealthcareService extends DomainResource {
+    export interface HealthcareService extends DomainResource {
         /**
          * External identifiers for this item
          */
@@ -13120,7 +13120,7 @@ declare module fhir {
     /**
      * Study identity of the selected instances
      */
-    interface ImagingManifestStudy extends BackboneElement {
+    export interface ImagingManifestStudy extends BackboneElement {
         /**
          * Study instance UID
          */
@@ -13145,7 +13145,7 @@ declare module fhir {
     /**
      * Series identity of the selected instances
      */
-    interface ImagingManifestStudySeries extends BackboneElement {
+    export interface ImagingManifestStudySeries extends BackboneElement {
         /**
          * Series instance UID
          */
@@ -13166,7 +13166,7 @@ declare module fhir {
     /**
      * The selected instance
      */
-    interface ImagingManifestStudySeriesInstance extends BackboneElement {
+    export interface ImagingManifestStudySeriesInstance extends BackboneElement {
         /**
          * SOP class UID of instance
          */
@@ -13187,7 +13187,7 @@ declare module fhir {
     /**
      * Key Object Selection
      */
-    interface ImagingManifest extends DomainResource {
+    export interface ImagingManifest extends DomainResource {
         /**
          * SOP Instance UID
          */
@@ -13224,7 +13224,7 @@ declare module fhir {
     /**
      * Each study has one or more series of instances
      */
-    interface ImagingStudySeries extends BackboneElement {
+    export interface ImagingStudySeries extends BackboneElement {
         /**
          * Formal DICOM identifier for this series
          */
@@ -13301,7 +13301,7 @@ declare module fhir {
     /**
      * A single SOP instance from the series
      */
-    interface ImagingStudySeriesInstance extends BackboneElement {
+    export interface ImagingStudySeriesInstance extends BackboneElement {
         /**
          * Formal DICOM identifier for this instance
          */
@@ -13338,7 +13338,7 @@ declare module fhir {
     /**
      * A set of images produced in single study (one or more series of references images)
      */
-    interface ImagingStudy extends DomainResource {
+    export interface ImagingStudy extends DomainResource {
         /**
          * Formal DICOM identifier for the study
          */
@@ -13443,7 +13443,7 @@ declare module fhir {
     /**
      * Who performed event
      */
-    interface ImmunizationPractitioner extends BackboneElement {
+    export interface ImmunizationPractitioner extends BackboneElement {
         /**
          * What type of performance was done
          */
@@ -13456,7 +13456,7 @@ declare module fhir {
     /**
      * Administration/non-administration reasons
      */
-    interface ImmunizationExplanation extends BackboneElement {
+    export interface ImmunizationExplanation extends BackboneElement {
         /**
          * Why immunization occurred
          */
@@ -13469,7 +13469,7 @@ declare module fhir {
     /**
      * Details of a reaction that follows immunization
      */
-    interface ImmunizationReaction extends BackboneElement {
+    export interface ImmunizationReaction extends BackboneElement {
         /**
          * When reaction started
          */
@@ -13494,7 +13494,7 @@ declare module fhir {
     /**
      * What protocol was followed
      */
-    interface ImmunizationVaccinationProtocol extends BackboneElement {
+    export interface ImmunizationVaccinationProtocol extends BackboneElement {
         /**
          * Dose number within series
          */
@@ -13547,7 +13547,7 @@ declare module fhir {
     /**
      * Immunization event information
      */
-    interface Immunization extends DomainResource {
+    export interface Immunization extends DomainResource {
         /**
          * Business identifier
          */
@@ -13660,7 +13660,7 @@ declare module fhir {
     /**
      * Vaccine administration recommendations
      */
-    interface ImmunizationRecommendationRecommendation extends BackboneElement {
+    export interface ImmunizationRecommendationRecommendation extends BackboneElement {
         /**
          * Date recommendation created
          */
@@ -13709,7 +13709,7 @@ declare module fhir {
     /**
      * Dates governing proposed immunization
      */
-    interface ImmunizationRecommendationRecommendationDateCriterion extends BackboneElement {
+    export interface ImmunizationRecommendationRecommendationDateCriterion extends BackboneElement {
         /**
          * Type of date
          */
@@ -13726,7 +13726,7 @@ declare module fhir {
     /**
      * Protocol used by recommendation
      */
-    interface ImmunizationRecommendationRecommendationProtocol extends BackboneElement {
+    export interface ImmunizationRecommendationRecommendationProtocol extends BackboneElement {
         /**
          * Dose number within sequence
          */
@@ -13759,7 +13759,7 @@ declare module fhir {
     /**
      * Guidance or advice relating to an immunization
      */
-    interface ImmunizationRecommendation extends DomainResource {
+    export interface ImmunizationRecommendation extends DomainResource {
         /**
          * Business identifier
          */
@@ -13776,7 +13776,7 @@ declare module fhir {
     /**
      * Another Implementation guide this depends on
      */
-    interface ImplementationGuideDependency extends BackboneElement {
+    export interface ImplementationGuideDependency extends BackboneElement {
         /**
          * reference | inclusion
          */
@@ -13797,7 +13797,7 @@ declare module fhir {
     /**
      * Group of resources as used in .page.package
      */
-    interface ImplementationGuidePackage extends BackboneElement {
+    export interface ImplementationGuidePackage extends BackboneElement {
         /**
          * Name used .page.package
          */
@@ -13822,7 +13822,7 @@ declare module fhir {
     /**
      * Resource in the implementation guide
      */
-    interface ImplementationGuidePackageResource extends BackboneElement {
+    export interface ImplementationGuidePackageResource extends BackboneElement {
         /**
          * If not an example, has its normal meaning
          */
@@ -13875,7 +13875,7 @@ declare module fhir {
     /**
      * Profiles that apply globally
      */
-    interface ImplementationGuideGlobal extends BackboneElement {
+    export interface ImplementationGuideGlobal extends BackboneElement {
         /**
          * Type this profiles applies to
          */
@@ -13892,7 +13892,7 @@ declare module fhir {
     /**
      * Page/Section in the Guide
      */
-    interface ImplementationGuidePage extends BackboneElement {
+    export interface ImplementationGuidePage extends BackboneElement {
         /**
          * Where to find that page
          */
@@ -13949,7 +13949,7 @@ declare module fhir {
     /**
      * A set of rules about how FHIR is used
      */
-    interface ImplementationGuide extends DomainResource {
+    export interface ImplementationGuide extends DomainResource {
         /**
          * Logical URI to reference this implementation guide (globally unique)
          */
@@ -14070,7 +14070,7 @@ declare module fhir {
     /**
      * Definition of a parameter to a module
      */
-    interface ParameterDefinition extends Element {
+    export interface ParameterDefinition extends Element {
         /**
          * Name used to access the parameter value
          */
@@ -14127,7 +14127,7 @@ declare module fhir {
     /**
      * Represents a library of quality improvement components
      */
-    interface Library extends DomainResource {
+    export interface Library extends DomainResource {
         /**
          * Logical URI to reference this library (globally unique)
          */
@@ -14292,7 +14292,7 @@ declare module fhir {
     /**
      * Item to be linked
      */
-    interface LinkageItem extends BackboneElement {
+    export interface LinkageItem extends BackboneElement {
         /**
          * source | alternate | historical
          */
@@ -14309,7 +14309,7 @@ declare module fhir {
     /**
      * Links records for 'same' item
      */
-    interface Linkage extends DomainResource {
+    export interface Linkage extends DomainResource {
         /**
          * Whether this linkage assertion is active or not
          */
@@ -14330,7 +14330,7 @@ declare module fhir {
     /**
      * Entries in the list
      */
-    interface ListEntry extends BackboneElement {
+    export interface ListEntry extends BackboneElement {
         /**
          * Status/Workflow information about this item
          */
@@ -14359,7 +14359,7 @@ declare module fhir {
     /**
      * Information summarized from a list of other resources
      */
-    interface List extends DomainResource {
+    export interface List extends DomainResource {
         /**
          * Business identifier
          */
@@ -14432,7 +14432,7 @@ declare module fhir {
     /**
      * The absolute geographic location
      */
-    interface LocationPosition extends BackboneElement {
+    export interface LocationPosition extends BackboneElement {
         /**
          * Longitude with WGS84 datum
          */
@@ -14461,7 +14461,7 @@ declare module fhir {
     /**
      * Details and position information for a physical place
      */
-    interface Location extends DomainResource {
+    export interface Location extends DomainResource {
         /**
          * Unique code or number identifying the location to its users
          */
@@ -14546,7 +14546,7 @@ declare module fhir {
     /**
      * Population criteria group
      */
-    interface MeasureGroup extends BackboneElement {
+    export interface MeasureGroup extends BackboneElement {
         /**
          * Unique identifier
          */
@@ -14579,7 +14579,7 @@ declare module fhir {
     /**
      * Population criteria
      */
-    interface MeasureGroupPopulation extends BackboneElement {
+    export interface MeasureGroupPopulation extends BackboneElement {
         /**
          * Unique identifier
          */
@@ -14616,7 +14616,7 @@ declare module fhir {
     /**
      * Stratifier criteria for the measure
      */
-    interface MeasureGroupStratifier extends BackboneElement {
+    export interface MeasureGroupStratifier extends BackboneElement {
         /**
          * The identifier for the stratifier used to coordinate the reported data back to this stratifier
          */
@@ -14641,7 +14641,7 @@ declare module fhir {
     /**
      * What other data should be reported with the measure
      */
-    interface MeasureSupplementalData extends BackboneElement {
+    export interface MeasureSupplementalData extends BackboneElement {
         /**
          * Identifier, unique within the measure
          */
@@ -14670,7 +14670,7 @@ declare module fhir {
     /**
      * A quality measure definition
      */
-    interface Measure extends DomainResource {
+    export interface Measure extends DomainResource {
         /**
          * Logical URI to reference this measure (globally unique)
          */
@@ -14915,7 +14915,7 @@ declare module fhir {
     /**
      * Measure results for each group
      */
-    interface MeasureReportGroup extends BackboneElement {
+    export interface MeasureReportGroup extends BackboneElement {
         /**
          * What group of the measure
          */
@@ -14940,7 +14940,7 @@ declare module fhir {
     /**
      * The populations in the group
      */
-    interface MeasureReportGroupPopulation extends BackboneElement {
+    export interface MeasureReportGroupPopulation extends BackboneElement {
         /**
          * Population identifier as defined in the measure
          */
@@ -14965,7 +14965,7 @@ declare module fhir {
     /**
      * Stratification results
      */
-    interface MeasureReportGroupStratifier extends BackboneElement {
+    export interface MeasureReportGroupStratifier extends BackboneElement {
         /**
          * What stratifier of the group
          */
@@ -14978,7 +14978,7 @@ declare module fhir {
     /**
      * Stratum results, one for each unique value in the stratifier
      */
-    interface MeasureReportGroupStratifierStratum extends BackboneElement {
+    export interface MeasureReportGroupStratifierStratum extends BackboneElement {
         /**
          * The stratum value, e.g. male
          */
@@ -15003,7 +15003,7 @@ declare module fhir {
     /**
      * Population results in this stratum
      */
-    interface MeasureReportGroupStratifierStratumPopulation extends BackboneElement {
+    export interface MeasureReportGroupStratifierStratumPopulation extends BackboneElement {
         /**
          * Population identifier as defined in the measure
          */
@@ -15028,7 +15028,7 @@ declare module fhir {
     /**
      * Results of a measure evaluation
      */
-    interface MeasureReport extends DomainResource {
+    export interface MeasureReport extends DomainResource {
         /**
          * Additional identifier for the Report
          */
@@ -15085,7 +15085,7 @@ declare module fhir {
     /**
      * A photo, video, or audio recording acquired or used in healthcare. The actual content may be inline or provided by direct reference
      */
-    interface Media extends DomainResource {
+    export interface Media extends DomainResource {
         /**
          * Identifier(s) for the image
          */
@@ -15190,7 +15190,7 @@ declare module fhir {
     /**
      * Active or inactive ingredient
      */
-    interface MedicationIngredient extends BackboneElement {
+    export interface MedicationIngredient extends BackboneElement {
         /**
          * The product contained
          */
@@ -15215,7 +15215,7 @@ declare module fhir {
     /**
      * Details about packaged medications
      */
-    interface MedicationPackage extends BackboneElement {
+    export interface MedicationPackage extends BackboneElement {
         /**
          * E.g. box, vial, blister-pack
          */
@@ -15232,7 +15232,7 @@ declare module fhir {
     /**
      * What is  in the package
      */
-    interface MedicationPackageContent extends BackboneElement {
+    export interface MedicationPackageContent extends BackboneElement {
         /**
          * The item in the package
          */
@@ -15249,7 +15249,7 @@ declare module fhir {
     /**
      * Identifies a single production run
      */
-    interface MedicationPackageBatch extends BackboneElement {
+    export interface MedicationPackageBatch extends BackboneElement {
         /**
          * Identifier assigned to batch
          */
@@ -15270,7 +15270,7 @@ declare module fhir {
     /**
      * Definition of a Medication
      */
-    interface Medication extends DomainResource {
+    export interface Medication extends DomainResource {
         /**
          * Codes that identify this medication
          */
@@ -15323,7 +15323,7 @@ declare module fhir {
     /**
      * Who administered substance
      */
-    interface MedicationAdministrationPerformer extends BackboneElement {
+    export interface MedicationAdministrationPerformer extends BackboneElement {
         /**
          * Individual who was performing
          */
@@ -15336,7 +15336,7 @@ declare module fhir {
     /**
      * Details of how medication was taken
      */
-    interface MedicationAdministrationDosage extends BackboneElement {
+    export interface MedicationAdministrationDosage extends BackboneElement {
         /**
          * Free text dosage instructions e.g. SIG
          */
@@ -15373,7 +15373,7 @@ declare module fhir {
     /**
      * Administration of medication to a patient
      */
-    interface MedicationAdministration extends DomainResource {
+    export interface MedicationAdministration extends DomainResource {
         /**
          * External identifier
          */
@@ -15478,7 +15478,7 @@ declare module fhir {
     /**
      * Who performed event
      */
-    interface MedicationDispensePerformer extends BackboneElement {
+    export interface MedicationDispensePerformer extends BackboneElement {
         /**
          * Individual who was performing
          */
@@ -15491,7 +15491,7 @@ declare module fhir {
     /**
      * Whether a substitution was performed on the dispense
      */
-    interface MedicationDispenseSubstitution extends BackboneElement {
+    export interface MedicationDispenseSubstitution extends BackboneElement {
         /**
          * Whether a substitution was or was not performed on the dispense
          */
@@ -15516,7 +15516,7 @@ declare module fhir {
     /**
      * Dispensing a medication to a named patient
      */
-    interface MedicationDispense extends DomainResource {
+    export interface MedicationDispense extends DomainResource {
         /**
          * External identifier
          */
@@ -15641,7 +15641,7 @@ declare module fhir {
     /**
      * Who/What requested the Request
      */
-    interface MedicationRequestRequester extends BackboneElement {
+    export interface MedicationRequestRequester extends BackboneElement {
         /**
          * Who ordered the initial medication(s)
          */
@@ -15654,7 +15654,7 @@ declare module fhir {
     /**
      * Medication supply authorization
      */
-    interface MedicationRequestDispenseRequest extends BackboneElement {
+    export interface MedicationRequestDispenseRequest extends BackboneElement {
         /**
          * Time period supply is authorized for
          */
@@ -15683,7 +15683,7 @@ declare module fhir {
     /**
      * Any restrictions on medication substitution
      */
-    interface MedicationRequestSubstitution extends BackboneElement {
+    export interface MedicationRequestSubstitution extends BackboneElement {
         /**
          * Whether substitution is allowed or not
          */
@@ -15700,7 +15700,7 @@ declare module fhir {
     /**
      * Ordering of medication for patient or group
      */
-    interface MedicationRequest extends DomainResource {
+    export interface MedicationRequest extends DomainResource {
         /**
          * External ids for this request
          */
@@ -15821,7 +15821,7 @@ declare module fhir {
     /**
      * Record of medication being taken by a patient
      */
-    interface MedicationStatement extends DomainResource {
+    export interface MedicationStatement extends DomainResource {
         /**
          * External identifier
          */
@@ -15922,7 +15922,7 @@ declare module fhir {
     /**
      * Resource(s) that are the subject of the event
      */
-    interface MessageDefinitionFocus extends BackboneElement {
+    export interface MessageDefinitionFocus extends BackboneElement {
         /**
          * Type of resource
          */
@@ -15955,7 +15955,7 @@ declare module fhir {
     /**
      * Responses to this message
      */
-    interface MessageDefinitionAllowedResponse extends BackboneElement {
+    export interface MessageDefinitionAllowedResponse extends BackboneElement {
         /**
          * Reference to allowed message definition response
          */
@@ -15972,7 +15972,7 @@ declare module fhir {
     /**
      * A resource that defines a type of message that can be exchanged between systems
      */
-    interface MessageDefinition extends DomainResource {
+    export interface MessageDefinition extends DomainResource {
         /**
          * Logical URI to reference this message definition (globally unique)
          */
@@ -16121,7 +16121,7 @@ declare module fhir {
     /**
      * Message destination application(s)
      */
-    interface MessageHeaderDestination extends BackboneElement {
+    export interface MessageHeaderDestination extends BackboneElement {
         /**
          * Name of system
          */
@@ -16146,7 +16146,7 @@ declare module fhir {
     /**
      * Message source application
      */
-    interface MessageHeaderSource extends BackboneElement {
+    export interface MessageHeaderSource extends BackboneElement {
         /**
          * Name of system
          */
@@ -16187,7 +16187,7 @@ declare module fhir {
     /**
      * If this is a reply to prior message
      */
-    interface MessageHeaderResponse extends BackboneElement {
+    export interface MessageHeaderResponse extends BackboneElement {
         /**
          * Id of original message
          */
@@ -16212,7 +16212,7 @@ declare module fhir {
     /**
      * A resource that describes a message that is exchanged between systems
      */
-    interface MessageHeader extends DomainResource {
+    export interface MessageHeader extends DomainResource {
         /**
          * Code for the event this message represents
          */
@@ -16269,7 +16269,7 @@ declare module fhir {
     /**
      * Unique identifiers used for system
      */
-    interface NamingSystemUniqueId extends BackboneElement {
+    export interface NamingSystemUniqueId extends BackboneElement {
         /**
          * oid | uuid | uri | other
          */
@@ -16310,7 +16310,7 @@ declare module fhir {
     /**
      * System of unique identification
      */
-    interface NamingSystem extends DomainResource {
+    export interface NamingSystem extends DomainResource {
         /**
          * Name for this naming system (computer friendly)
          */
@@ -16403,7 +16403,7 @@ declare module fhir {
     /**
      * Oral diet components
      */
-    interface NutritionOrderOralDiet extends BackboneElement {
+    export interface NutritionOrderOralDiet extends BackboneElement {
         /**
          * Type of oral diet or diet restrictions that describe what can be consumed orally
          */
@@ -16436,7 +16436,7 @@ declare module fhir {
     /**
      * Required  nutrient modifications
      */
-    interface NutritionOrderOralDietNutrient extends BackboneElement {
+    export interface NutritionOrderOralDietNutrient extends BackboneElement {
         /**
          * Type of nutrient that is being modified
          */
@@ -16449,7 +16449,7 @@ declare module fhir {
     /**
      * Required  texture modifications
      */
-    interface NutritionOrderOralDietTexture extends BackboneElement {
+    export interface NutritionOrderOralDietTexture extends BackboneElement {
         /**
          * Code to indicate how to alter the texture of the foods, e.g. pureed
          */
@@ -16462,7 +16462,7 @@ declare module fhir {
     /**
      * Supplement components
      */
-    interface NutritionOrderSupplement extends BackboneElement {
+    export interface NutritionOrderSupplement extends BackboneElement {
         /**
          * Type of supplement product requested
          */
@@ -16495,7 +16495,7 @@ declare module fhir {
     /**
      * Enteral formula components
      */
-    interface NutritionOrderEnteralFormula extends BackboneElement {
+    export interface NutritionOrderEnteralFormula extends BackboneElement {
         /**
          * Type of enteral or infant formula
          */
@@ -16548,7 +16548,7 @@ declare module fhir {
     /**
      * Formula feeding instruction as structured data
      */
-    interface NutritionOrderEnteralFormulaAdministration extends BackboneElement {
+    export interface NutritionOrderEnteralFormulaAdministration extends BackboneElement {
         /**
          * Scheduled frequency of enteral feeding
          */
@@ -16569,7 +16569,7 @@ declare module fhir {
     /**
      * Diet, formula or nutritional supplement request
      */
-    interface NutritionOrder extends DomainResource {
+    export interface NutritionOrder extends DomainResource {
         /**
          * Identifiers assigned to this order
          */
@@ -16630,7 +16630,7 @@ declare module fhir {
     /**
      * Provides guide for interpretation
      */
-    interface ObservationReferenceRange extends BackboneElement {
+    export interface ObservationReferenceRange extends BackboneElement {
         /**
          * Low Range, if relevant
          */
@@ -16663,7 +16663,7 @@ declare module fhir {
     /**
      * Resource related to this observation
      */
-    interface ObservationRelated extends BackboneElement {
+    export interface ObservationRelated extends BackboneElement {
         /**
          * has-member | derived-from | sequel-to | replaces | qualified-by | interfered-by
          */
@@ -16680,7 +16680,7 @@ declare module fhir {
     /**
      * Component results
      */
-    interface ObservationComponent extends BackboneElement {
+    export interface ObservationComponent extends BackboneElement {
         /**
          * Type of component observation (code / type)
          */
@@ -16753,7 +16753,7 @@ declare module fhir {
     /**
      * Measurements and simple assertions
      */
-    interface Observation extends DomainResource {
+    export interface Observation extends DomainResource {
         /**
          * Business Identifier for observation
          */
@@ -16918,7 +16918,7 @@ declare module fhir {
     /**
      * Parameters for the operation/query
      */
-    interface OperationDefinitionParameter extends BackboneElement {
+    export interface OperationDefinitionParameter extends BackboneElement {
         /**
          * Name in Parameters.parameter.name or in URL
          */
@@ -16991,7 +16991,7 @@ declare module fhir {
     /**
      * ValueSet details if this is coded
      */
-    interface OperationDefinitionParameterBinding extends BackboneElement {
+    export interface OperationDefinitionParameterBinding extends BackboneElement {
         /**
          * required | extensible | preferred | example
          */
@@ -17016,7 +17016,7 @@ declare module fhir {
     /**
      * Define overloaded variants for when  generating code
      */
-    interface OperationDefinitionOverload extends BackboneElement {
+    export interface OperationDefinitionOverload extends BackboneElement {
         /**
          * Name of parameter to include in overload
          */
@@ -17037,7 +17037,7 @@ declare module fhir {
     /**
      * Definition of an operation or a named query
      */
-    interface OperationDefinition extends DomainResource {
+    export interface OperationDefinition extends DomainResource {
         /**
          * Logical URI to reference this operation definition (globally unique)
          */
@@ -17202,7 +17202,7 @@ declare module fhir {
     /**
      * A single issue associated with the action
      */
-    interface OperationOutcomeIssue extends BackboneElement {
+    export interface OperationOutcomeIssue extends BackboneElement {
         /**
          * fatal | error | warning | information
          */
@@ -17251,7 +17251,7 @@ declare module fhir {
     /**
      * Information about the success/failure of an action
      */
-    interface OperationOutcome extends DomainResource {
+    export interface OperationOutcome extends DomainResource {
         /**
          * A single issue associated with the action
          */
@@ -17260,7 +17260,7 @@ declare module fhir {
     /**
      * Contact for the organization for a certain purpose
      */
-    interface OrganizationContact extends BackboneElement {
+    export interface OrganizationContact extends BackboneElement {
         /**
          * The type of contact
          */
@@ -17281,7 +17281,7 @@ declare module fhir {
     /**
      * A grouping of people or organizations with a common purpose
      */
-    interface Organization extends DomainResource {
+    export interface Organization extends DomainResource {
         /**
          * Identifies this organization  across multiple systems
          */
@@ -17338,7 +17338,7 @@ declare module fhir {
     /**
      * Operation Parameter
      */
-    interface ParametersParameter extends BackboneElement {
+    export interface ParametersParameter extends BackboneElement {
         /**
          * Name from the definition
          */
@@ -17575,7 +17575,7 @@ declare module fhir {
     /**
      * Operation Request or Response
      */
-    interface Parameters extends ResourceBase {
+    export interface Parameters extends ResourceBase {
         /**
          * Operation Parameter
          */
@@ -17584,7 +17584,7 @@ declare module fhir {
     /**
      * A contact party (e.g. guardian, partner, friend) for the patient
      */
-    interface PatientContact extends BackboneElement {
+    export interface PatientContact extends BackboneElement {
         /**
          * The kind of relationship
          */
@@ -17621,7 +17621,7 @@ declare module fhir {
     /**
      * This patient is known to be an animal (non-human)
      */
-    interface PatientAnimal extends BackboneElement {
+    export interface PatientAnimal extends BackboneElement {
         /**
          * E.g. Dog, Cow
          */
@@ -17638,7 +17638,7 @@ declare module fhir {
     /**
      * A list of Languages which may be used to communicate with the patient about his or her health
      */
-    interface PatientCommunication extends BackboneElement {
+    export interface PatientCommunication extends BackboneElement {
         /**
          * The language which can be used to communicate with the patient about his or her health
          */
@@ -17655,7 +17655,7 @@ declare module fhir {
     /**
      * Link to another patient resource that concerns the same actual person
      */
-    interface PatientLink extends BackboneElement {
+    export interface PatientLink extends BackboneElement {
         /**
          * The other patient or related person resource that the link refers to
          */
@@ -17672,7 +17672,7 @@ declare module fhir {
     /**
      * Information about an individual or animal receiving health care services
      */
-    interface Patient extends DomainResource {
+    export interface Patient extends DomainResource {
         /**
          * An identifier for this patient
          */
@@ -17781,7 +17781,7 @@ declare module fhir {
     /**
      * PaymentNotice request
      */
-    interface PaymentNotice extends DomainResource {
+    export interface PaymentNotice extends DomainResource {
         /**
          * Business Identifier
          */
@@ -17838,7 +17838,7 @@ declare module fhir {
     /**
      * List of settlements
      */
-    interface PaymentReconciliationDetail extends BackboneElement {
+    export interface PaymentReconciliationDetail extends BackboneElement {
         /**
          * Type code
          */
@@ -17875,7 +17875,7 @@ declare module fhir {
     /**
      * Processing comments
      */
-    interface PaymentReconciliationProcessNote extends BackboneElement {
+    export interface PaymentReconciliationProcessNote extends BackboneElement {
         /**
          * display | print | printoper
          */
@@ -17892,7 +17892,7 @@ declare module fhir {
     /**
      * PaymentReconciliation resource
      */
-    interface PaymentReconciliation extends DomainResource {
+    export interface PaymentReconciliation extends DomainResource {
         /**
          * Business Identifier
          */
@@ -17965,7 +17965,7 @@ declare module fhir {
     /**
      * Link to a resource that concerns the same actual person
      */
-    interface PersonLink extends BackboneElement {
+    export interface PersonLink extends BackboneElement {
         /**
          * The resource to which this actual person is associated
          */
@@ -17982,7 +17982,7 @@ declare module fhir {
     /**
      * A generic person record
      */
-    interface Person extends DomainResource {
+    export interface Person extends DomainResource {
         /**
          * A human identifier for this person
          */
@@ -18039,7 +18039,7 @@ declare module fhir {
     /**
      * What the plan is trying to accomplish
      */
-    interface PlanDefinitionGoal extends BackboneElement {
+    export interface PlanDefinitionGoal extends BackboneElement {
         /**
          * E.g. Treatment, dietary, behavioral, etc
          */
@@ -18072,7 +18072,7 @@ declare module fhir {
     /**
      * Target outcome for the goal
      */
-    interface PlanDefinitionGoalTarget extends BackboneElement {
+    export interface PlanDefinitionGoalTarget extends BackboneElement {
         /**
          * The parameter whose value is to be tracked
          */
@@ -18097,7 +18097,7 @@ declare module fhir {
     /**
      * Action defined by the plan
      */
-    interface PlanDefinitionAction extends BackboneElement {
+    export interface PlanDefinitionAction extends BackboneElement {
         /**
          * User-visible label for the action (e.g. 1. or A.)
          */
@@ -18262,7 +18262,7 @@ declare module fhir {
     /**
      * Defines an expected trigger for a module
      */
-    interface TriggerDefinition extends Element {
+    export interface TriggerDefinition extends Element {
         /**
          * named-event | periodic | data-added | data-modified | data-removed | data-accessed | data-access-ended
          */
@@ -18311,7 +18311,7 @@ declare module fhir {
     /**
      * Whether or not the action is applicable
      */
-    interface PlanDefinitionActionCondition extends BackboneElement {
+    export interface PlanDefinitionActionCondition extends BackboneElement {
         /**
          * applicability | start | stop
          */
@@ -18348,7 +18348,7 @@ declare module fhir {
     /**
      * Relationship to another action
      */
-    interface PlanDefinitionActionRelatedAction extends BackboneElement {
+    export interface PlanDefinitionActionRelatedAction extends BackboneElement {
         /**
          * What action is this related to
          */
@@ -18377,7 +18377,7 @@ declare module fhir {
     /**
      * Who should participate in the action
      */
-    interface PlanDefinitionActionParticipant extends BackboneElement {
+    export interface PlanDefinitionActionParticipant extends BackboneElement {
         /**
          * patient | practitioner | related-person
          */
@@ -18394,7 +18394,7 @@ declare module fhir {
     /**
      * Dynamic aspects of the definition
      */
-    interface PlanDefinitionActionDynamicValue extends BackboneElement {
+    export interface PlanDefinitionActionDynamicValue extends BackboneElement {
         /**
          * Natural language description of the dynamic value
          */
@@ -18431,7 +18431,7 @@ declare module fhir {
     /**
      * The definition of a plan for a series of actions, independent of any specific patient or context
      */
-    interface PlanDefinition extends DomainResource {
+    export interface PlanDefinition extends DomainResource {
         /**
          * Logical URI to reference this plan definition (globally unique)
          */
@@ -18596,7 +18596,7 @@ declare module fhir {
     /**
      * Qualifications obtained by training and certification
      */
-    interface PractitionerQualification extends BackboneElement {
+    export interface PractitionerQualification extends BackboneElement {
         /**
          * An identifier for this qualification for the practitioner
          */
@@ -18617,7 +18617,7 @@ declare module fhir {
     /**
      * A person with a  formal responsibility in the provisioning of healthcare or related services
      */
-    interface Practitioner extends DomainResource {
+    export interface Practitioner extends DomainResource {
         /**
          * A identifier for the person as this agent
          */
@@ -18674,7 +18674,7 @@ declare module fhir {
     /**
      * Times the Service Site is available
      */
-    interface PractitionerRoleAvailableTime extends BackboneElement {
+    export interface PractitionerRoleAvailableTime extends BackboneElement {
         /**
          * mon | tue | wed | thu | fri | sat | sun
          */
@@ -18711,7 +18711,7 @@ declare module fhir {
     /**
      * Not available during this time due to provided reason
      */
-    interface PractitionerRoleNotAvailable extends BackboneElement {
+    export interface PractitionerRoleNotAvailable extends BackboneElement {
         /**
          * Reason presented to the user explaining why time not available
          */
@@ -18728,7 +18728,7 @@ declare module fhir {
     /**
      * Roles/organizations the practitioner is associated with
      */
-    interface PractitionerRole extends DomainResource {
+    export interface PractitionerRole extends DomainResource {
         /**
          * Business Identifiers that are specific to a role/location
          */
@@ -18797,7 +18797,7 @@ declare module fhir {
     /**
      * The people who performed the procedure
      */
-    interface ProcedurePerformer extends BackboneElement {
+    export interface ProcedurePerformer extends BackboneElement {
         /**
          * The role the actor was in
          */
@@ -18814,7 +18814,7 @@ declare module fhir {
     /**
      * Device changed in procedure
      */
-    interface ProcedureFocalDevice extends BackboneElement {
+    export interface ProcedureFocalDevice extends BackboneElement {
         /**
          * Kind of change to device
          */
@@ -18827,7 +18827,7 @@ declare module fhir {
     /**
      * An action that is being or was performed on a patient
      */
-    interface Procedure extends DomainResource {
+    export interface Procedure extends DomainResource {
         /**
          * External Identifiers for this procedure
          */
@@ -18952,7 +18952,7 @@ declare module fhir {
     /**
      * Who/what is requesting procedure or diagnostic
      */
-    interface ProcedureRequestRequester extends BackboneElement {
+    export interface ProcedureRequestRequester extends BackboneElement {
         /**
          * Individual making the request
          */
@@ -18965,7 +18965,7 @@ declare module fhir {
     /**
      * A request for a procedure or diagnostic to be performed
      */
-    interface ProcedureRequest extends DomainResource {
+    export interface ProcedureRequest extends DomainResource {
         /**
          * Identifiers assigned to this order
          */
@@ -19114,7 +19114,7 @@ declare module fhir {
     /**
      * Items to re-adjudicate
      */
-    interface ProcessRequestItem extends BackboneElement {
+    export interface ProcessRequestItem extends BackboneElement {
         /**
          * Service instance
          */
@@ -19127,7 +19127,7 @@ declare module fhir {
     /**
      * Request to perform some action on or in regards to an existing resource
      */
-    interface ProcessRequest extends DomainResource {
+    export interface ProcessRequest extends DomainResource {
         /**
          * Business Identifier
          */
@@ -19220,7 +19220,7 @@ declare module fhir {
     /**
      * Processing comments or additional requirements
      */
-    interface ProcessResponseProcessNote extends BackboneElement {
+    export interface ProcessResponseProcessNote extends BackboneElement {
         /**
          * display | print | printoper
          */
@@ -19237,7 +19237,7 @@ declare module fhir {
     /**
      * ProcessResponse resource
      */
-    interface ProcessResponse extends DomainResource {
+    export interface ProcessResponse extends DomainResource {
         /**
          * Business Identifier
          */
@@ -19306,7 +19306,7 @@ declare module fhir {
     /**
      * Actor involved
      */
-    interface ProvenanceAgent extends BackboneElement {
+    export interface ProvenanceAgent extends BackboneElement {
         /**
          * What the agents role was
          */
@@ -19343,7 +19343,7 @@ declare module fhir {
     /**
      * An entity used in this activity
      */
-    interface ProvenanceEntity extends BackboneElement {
+    export interface ProvenanceEntity extends BackboneElement {
         /**
          * derivation | revision | quotation | source | removal
          */
@@ -19376,7 +19376,7 @@ declare module fhir {
     /**
      * Who, What, When for a set of resources
      */
-    interface Provenance extends DomainResource {
+    export interface Provenance extends DomainResource {
         /**
          * Target Reference(s) (usually version specific)
          */
@@ -19429,7 +19429,7 @@ declare module fhir {
     /**
      * Questions and sections within the Questionnaire
      */
-    interface QuestionnaireItem extends BackboneElement {
+    export interface QuestionnaireItem extends BackboneElement {
         /**
          * Unique id for item in questionnaire
          */
@@ -19606,7 +19606,7 @@ declare module fhir {
     /**
      * Only allow data when
      */
-    interface QuestionnaireItemEnableWhen extends BackboneElement {
+    export interface QuestionnaireItemEnableWhen extends BackboneElement {
         /**
          * Question that determines whether item is enabled
          */
@@ -19707,7 +19707,7 @@ declare module fhir {
     /**
      * Permitted answer
      */
-    interface QuestionnaireItemOption extends BackboneElement {
+    export interface QuestionnaireItemOption extends BackboneElement {
         /**
          * Answer value
          */
@@ -19748,7 +19748,7 @@ declare module fhir {
     /**
      * A structured set of questions
      */
-    interface Questionnaire extends DomainResource {
+    export interface Questionnaire extends DomainResource {
         /**
          * Logical URI to reference this questionnaire (globally unique)
          */
@@ -19893,7 +19893,7 @@ declare module fhir {
     /**
      * Groups and questions
      */
-    interface QuestionnaireResponseItem extends BackboneElement {
+    export interface QuestionnaireResponseItem extends BackboneElement {
         /**
          * Pointer to specific item from Questionnaire
          */
@@ -19934,7 +19934,7 @@ declare module fhir {
     /**
      * The response(s) to the question
      */
-    interface QuestionnaireResponseItemAnswer extends BackboneElement {
+    export interface QuestionnaireResponseItemAnswer extends BackboneElement {
         /**
          * Single-valued answer to the question
          */
@@ -20023,7 +20023,7 @@ declare module fhir {
     /**
      * A structured set of questions and their answers
      */
-    interface QuestionnaireResponse extends DomainResource {
+    export interface QuestionnaireResponse extends DomainResource {
         /**
          * Unique id for this set of answers
          */
@@ -20080,7 +20080,7 @@ declare module fhir {
     /**
      * Who/what is requesting service
      */
-    interface ReferralRequestRequester extends BackboneElement {
+    export interface ReferralRequestRequester extends BackboneElement {
         /**
          * Individual making the request
          */
@@ -20093,7 +20093,7 @@ declare module fhir {
     /**
      * A request for referral or transfer of care
      */
-    interface ReferralRequest extends DomainResource {
+    export interface ReferralRequest extends DomainResource {
         /**
          * Business identifier
          */
@@ -20218,7 +20218,7 @@ declare module fhir {
     /**
      * An person that is related to a patient, but who is not a direct target of care
      */
-    interface RelatedPerson extends DomainResource {
+    export interface RelatedPerson extends DomainResource {
         /**
          * A human identifier for this person
          */
@@ -20279,7 +20279,7 @@ declare module fhir {
     /**
      * Proposed actions, if any
      */
-    interface RequestGroupAction extends BackboneElement {
+    export interface RequestGroupAction extends BackboneElement {
         /**
          * User-visible label for the action (e.g. 1. or A.)
          */
@@ -20412,7 +20412,7 @@ declare module fhir {
     /**
      * Whether or not the action is applicable
      */
-    interface RequestGroupActionCondition extends BackboneElement {
+    export interface RequestGroupActionCondition extends BackboneElement {
         /**
          * applicability | start | stop
          */
@@ -20449,7 +20449,7 @@ declare module fhir {
     /**
      * Relationship to another action
      */
-    interface RequestGroupActionRelatedAction extends BackboneElement {
+    export interface RequestGroupActionRelatedAction extends BackboneElement {
         /**
          * What action this is related to
          */
@@ -20478,7 +20478,7 @@ declare module fhir {
     /**
      * A group of related requests
      */
-    interface RequestGroup extends DomainResource {
+    export interface RequestGroup extends DomainResource {
         /**
          * Business identifier
          */
@@ -20563,7 +20563,7 @@ declare module fhir {
     /**
      * Defined path through the study for a subject
      */
-    interface ResearchStudyArm extends BackboneElement {
+    export interface ResearchStudyArm extends BackboneElement {
         /**
          * Label for study arm
          */
@@ -20588,7 +20588,7 @@ declare module fhir {
     /**
      * Investigation to increase healthcare-related patient-independent knowledge
      */
-    interface ResearchStudy extends DomainResource {
+    export interface ResearchStudy extends DomainResource {
         /**
          * Business Identifier for study
          */
@@ -20685,7 +20685,7 @@ declare module fhir {
     /**
      * Investigation to increase healthcare-related patient-independent knowledge
      */
-    interface ResearchSubject extends DomainResource {
+    export interface ResearchSubject extends DomainResource {
         /**
          * Business Identifier for research subject
          */
@@ -20734,7 +20734,7 @@ declare module fhir {
     /**
      * Outcome predicted
      */
-    interface RiskAssessmentPrediction extends BackboneElement {
+    export interface RiskAssessmentPrediction extends BackboneElement {
         /**
          * Possible outcome for the subject
          */
@@ -20783,7 +20783,7 @@ declare module fhir {
     /**
      * Potential outcomes for a subject with likelihood
      */
-    interface RiskAssessment extends DomainResource {
+    export interface RiskAssessment extends DomainResource {
         /**
          * Unique identifier for the assessment
          */
@@ -20876,7 +20876,7 @@ declare module fhir {
     /**
      * A container for slots of time that may be available for booking appointments
      */
-    interface Schedule extends DomainResource {
+    export interface Schedule extends DomainResource {
         /**
          * External Ids for this item
          */
@@ -20921,7 +20921,7 @@ declare module fhir {
     /**
      * For Composite resources to define the parts
      */
-    interface SearchParameterComponent extends BackboneElement {
+    export interface SearchParameterComponent extends BackboneElement {
         /**
          * Defines how the part works
          */
@@ -20938,7 +20938,7 @@ declare module fhir {
     /**
      * Search Parameter for a resource
      */
-    interface SearchParameter extends DomainResource {
+    export interface SearchParameter extends DomainResource {
         /**
          * Logical URI to reference this search parameter (globally unique)
          */
@@ -21119,7 +21119,7 @@ declare module fhir {
     /**
      * A sequence used as reference
      */
-    interface SequenceReferenceSeq extends BackboneElement {
+    export interface SequenceReferenceSeq extends BackboneElement {
         /**
          * Chromosome containing genetic finding
          */
@@ -21176,7 +21176,7 @@ declare module fhir {
     /**
      * Variant in sequence
      */
-    interface SequenceVariant extends BackboneElement {
+    export interface SequenceVariant extends BackboneElement {
         /**
          * Start position of the variant on the  reference sequence
          */
@@ -21225,7 +21225,7 @@ declare module fhir {
     /**
      * An set of value as quality of sequence
      */
-    interface SequenceQuality extends BackboneElement {
+    export interface SequenceQuality extends BackboneElement {
         /**
          * indel | snp | unknown
          */
@@ -21330,7 +21330,7 @@ declare module fhir {
     /**
      * External repository which contains detailed report related with observedSeq in this resource
      */
-    interface SequenceRepository extends BackboneElement {
+    export interface SequenceRepository extends BackboneElement {
         /**
          * directlink | openapi | login | oauth | other
          */
@@ -21383,7 +21383,7 @@ declare module fhir {
     /**
      * Information about a biological sequence
      */
-    interface Sequence extends DomainResource {
+    export interface Sequence extends DomainResource {
         /**
          * Unique ID for this particular sequence. This is a FHIR-defined id
          */
@@ -21464,7 +21464,7 @@ declare module fhir {
     /**
      * A description of decision support service functionality
      */
-    interface ServiceDefinition extends DomainResource {
+    export interface ServiceDefinition extends DomainResource {
         /**
          * Logical URI to reference this service definition (globally unique)
          */
@@ -21625,7 +21625,7 @@ declare module fhir {
     /**
      * A slot of time on a schedule that may be available for booking appointments
      */
-    interface Slot extends DomainResource {
+    export interface Slot extends DomainResource {
         /**
          * External Ids for this item
          */
@@ -21694,7 +21694,7 @@ declare module fhir {
     /**
      * Collection details
      */
-    interface SpecimenCollection extends BackboneElement {
+    export interface SpecimenCollection extends BackboneElement {
         /**
          * Who collected the specimen
          */
@@ -21727,7 +21727,7 @@ declare module fhir {
     /**
      * Processing and processing step details
      */
-    interface SpecimenProcessing extends BackboneElement {
+    export interface SpecimenProcessing extends BackboneElement {
         /**
          * Textual description of procedure
          */
@@ -21760,7 +21760,7 @@ declare module fhir {
     /**
      * Direct container of specimen (tube/slide, etc.)
      */
-    interface SpecimenContainer extends BackboneElement {
+    export interface SpecimenContainer extends BackboneElement {
         /**
          * Id for the container
          */
@@ -21797,7 +21797,7 @@ declare module fhir {
     /**
      * Sample for analysis
      */
-    interface Specimen extends DomainResource {
+    export interface Specimen extends DomainResource {
         /**
          * External Identifier
          */
@@ -21858,7 +21858,7 @@ declare module fhir {
     /**
      * External specification that the content is mapped to
      */
-    interface StructureDefinitionMapping extends BackboneElement {
+    export interface StructureDefinitionMapping extends BackboneElement {
         /**
          * Internal id when this mapping is used
          */
@@ -21895,7 +21895,7 @@ declare module fhir {
     /**
      * Snapshot view of the structure
      */
-    interface StructureDefinitionSnapshot extends BackboneElement {
+    export interface StructureDefinitionSnapshot extends BackboneElement {
         /**
          * Definition of elements in the resource (if no StructureDefinition)
          */
@@ -21904,7 +21904,7 @@ declare module fhir {
     /**
      * Differential view of the structure
      */
-    interface StructureDefinitionDifferential extends BackboneElement {
+    export interface StructureDefinitionDifferential extends BackboneElement {
         /**
          * Definition of elements in the resource (if no StructureDefinition)
          */
@@ -21913,7 +21913,7 @@ declare module fhir {
     /**
      * Structural Definition
      */
-    interface StructureDefinition extends DomainResource {
+    export interface StructureDefinition extends DomainResource {
         /**
          * Logical URI to reference this structure definition (globally unique)
          */
@@ -22110,7 +22110,7 @@ declare module fhir {
     /**
      * Structure Definition used by this map
      */
-    interface StructureMapStructure extends BackboneElement {
+    export interface StructureMapStructure extends BackboneElement {
         /**
          * Canonical URL for structure definition
          */
@@ -22147,7 +22147,7 @@ declare module fhir {
     /**
      * Named sections for reader convenience
      */
-    interface StructureMapGroup extends BackboneElement {
+    export interface StructureMapGroup extends BackboneElement {
         /**
          * Human-readable label
          */
@@ -22192,7 +22192,7 @@ declare module fhir {
     /**
      * Named instance provided when invoking the map
      */
-    interface StructureMapGroupInput extends BackboneElement {
+    export interface StructureMapGroupInput extends BackboneElement {
         /**
          * Name for this instance of data
          */
@@ -22229,7 +22229,7 @@ declare module fhir {
     /**
      * Transform Rule from source to target
      */
-    interface StructureMapGroupRule extends BackboneElement {
+    export interface StructureMapGroupRule extends BackboneElement {
         /**
          * Name of the rule for internal references
          */
@@ -22266,7 +22266,7 @@ declare module fhir {
     /**
      * Source inputs to the mapping
      */
-    interface StructureMapGroupRuleSource extends BackboneElement {
+    export interface StructureMapGroupRuleSource extends BackboneElement {
         /**
          * Type or variable this rule applies to
          */
@@ -22559,7 +22559,7 @@ declare module fhir {
     /**
      * Content to create because of this mapping rule
      */
-    interface StructureMapGroupRuleTarget extends BackboneElement {
+    export interface StructureMapGroupRuleTarget extends BackboneElement {
         /**
          * Type or variable this rule applies to
          */
@@ -22624,7 +22624,7 @@ declare module fhir {
     /**
      * Parameters to the transform
      */
-    interface StructureMapGroupRuleTargetParameter extends BackboneElement {
+    export interface StructureMapGroupRuleTargetParameter extends BackboneElement {
         /**
          * Parameter value - variable or literal
          */
@@ -22669,7 +22669,7 @@ declare module fhir {
     /**
      * Which other rules to apply in the context of this rule
      */
-    interface StructureMapGroupRuleDependent extends BackboneElement {
+    export interface StructureMapGroupRuleDependent extends BackboneElement {
         /**
          * Name of a rule or group to apply
          */
@@ -22690,7 +22690,7 @@ declare module fhir {
     /**
      * A Map of relationships between 2 structures that can be used to transform data
      */
-    interface StructureMap extends DomainResource {
+    export interface StructureMap extends DomainResource {
         /**
          * Logical URI to reference this structure map (globally unique)
          */
@@ -22815,7 +22815,7 @@ declare module fhir {
     /**
      * The channel on which to report matches to the criteria
      */
-    interface SubscriptionChannel extends BackboneElement {
+    export interface SubscriptionChannel extends BackboneElement {
         /**
          * rest-hook | websocket | email | sms | message
          */
@@ -22852,7 +22852,7 @@ declare module fhir {
     /**
      * A server push subscription criteria
      */
-    interface Subscription extends DomainResource {
+    export interface Subscription extends DomainResource {
         /**
          * requested | active | error | off
          */
@@ -22909,7 +22909,7 @@ declare module fhir {
     /**
      * If this describes a specific package/container of the substance
      */
-    interface SubstanceInstance extends BackboneElement {
+    export interface SubstanceInstance extends BackboneElement {
         /**
          * Identifier of the package/container
          */
@@ -22930,7 +22930,7 @@ declare module fhir {
     /**
      * Composition information about the substance
      */
-    interface SubstanceIngredient extends BackboneElement {
+    export interface SubstanceIngredient extends BackboneElement {
         /**
          * Optional amount (concentration)
          */
@@ -22947,7 +22947,7 @@ declare module fhir {
     /**
      * A homogeneous material with a definite composition
      */
-    interface Substance extends DomainResource {
+    export interface Substance extends DomainResource {
         /**
          * Unique identifier
          */
@@ -22988,7 +22988,7 @@ declare module fhir {
     /**
      * The item that is delivered or supplied
      */
-    interface SupplyDeliverySuppliedItem extends BackboneElement {
+    export interface SupplyDeliverySuppliedItem extends BackboneElement {
         /**
          * Amount dispensed
          */
@@ -23005,7 +23005,7 @@ declare module fhir {
     /**
      * Delivery of bulk Supplies
      */
-    interface SupplyDelivery extends DomainResource {
+    export interface SupplyDelivery extends DomainResource {
         /**
          * External identifier
          */
@@ -23070,7 +23070,7 @@ declare module fhir {
     /**
      * The item being requested
      */
-    interface SupplyRequestOrderedItem extends BackboneElement {
+    export interface SupplyRequestOrderedItem extends BackboneElement {
         /**
          * The requested amount of the item indicated
          */
@@ -23087,7 +23087,7 @@ declare module fhir {
     /**
      * Who/what is requesting service
      */
-    interface SupplyRequestRequester extends BackboneElement {
+    export interface SupplyRequestRequester extends BackboneElement {
         /**
          * Individual making the request
          */
@@ -23100,7 +23100,7 @@ declare module fhir {
     /**
      * Request for a medication, substance or device
      */
-    interface SupplyRequest extends DomainResource {
+    export interface SupplyRequest extends DomainResource {
         /**
          * Unique identifier
          */
@@ -23181,7 +23181,7 @@ declare module fhir {
     /**
      * Who is asking for task to be done
      */
-    interface TaskRequester extends BackboneElement {
+    export interface TaskRequester extends BackboneElement {
         /**
          * Individual asking for task
          */
@@ -23194,7 +23194,7 @@ declare module fhir {
     /**
      * Constraints on fulfillment tasks
      */
-    interface TaskRestriction extends BackboneElement {
+    export interface TaskRestriction extends BackboneElement {
         /**
          * How many times to repeat
          */
@@ -23215,7 +23215,7 @@ declare module fhir {
     /**
      * Information used to perform task
      */
-    interface TaskInput extends BackboneElement {
+    export interface TaskInput extends BackboneElement {
         /**
          * Label for the input
          */
@@ -23440,7 +23440,7 @@ declare module fhir {
     /**
      * Information produced as part of task
      */
-    interface TaskOutput extends BackboneElement {
+    export interface TaskOutput extends BackboneElement {
         /**
          * Label for output
          */
@@ -23665,7 +23665,7 @@ declare module fhir {
     /**
      * A task to be performed
      */
-    interface Task extends DomainResource {
+    export interface Task extends DomainResource {
         /**
          * Task Instance Identifier
          */
@@ -23810,7 +23810,7 @@ declare module fhir {
     /**
      * A participant in the test execution, either the execution engine, a client, or a server
      */
-    interface TestReportParticipant extends BackboneElement {
+    export interface TestReportParticipant extends BackboneElement {
         /**
          * test-engine | client | server
          */
@@ -23839,7 +23839,7 @@ declare module fhir {
     /**
      * The results of the series of required setup operations before the tests were executed
      */
-    interface TestReportSetup extends BackboneElement {
+    export interface TestReportSetup extends BackboneElement {
         /**
          * A setup operation or assert that was executed
          */
@@ -23848,7 +23848,7 @@ declare module fhir {
     /**
      * A setup operation or assert that was executed
      */
-    interface TestReportSetupAction extends BackboneElement {
+    export interface TestReportSetupAction extends BackboneElement {
         /**
          * The operation to perform
          */
@@ -23861,7 +23861,7 @@ declare module fhir {
     /**
      * The operation to perform
      */
-    interface TestReportSetupActionOperation extends BackboneElement {
+    export interface TestReportSetupActionOperation extends BackboneElement {
         /**
          * pass | skip | fail | warning | error
          */
@@ -23890,7 +23890,7 @@ declare module fhir {
     /**
      * The assertion to perform
      */
-    interface TestReportSetupActionAssert extends BackboneElement {
+    export interface TestReportSetupActionAssert extends BackboneElement {
         /**
          * pass | skip | fail | warning | error
          */
@@ -23919,7 +23919,7 @@ declare module fhir {
     /**
      * A test executed from the test script
      */
-    interface TestReportTest extends BackboneElement {
+    export interface TestReportTest extends BackboneElement {
         /**
          * Tracking/logging name of this test
          */
@@ -23944,7 +23944,7 @@ declare module fhir {
     /**
      * A test operation or assert that was performed
      */
-    interface TestReportTestAction extends BackboneElement {
+    export interface TestReportTestAction extends BackboneElement {
         /**
          * The operation performed
          */
@@ -23957,7 +23957,7 @@ declare module fhir {
     /**
      * The results of running the series of required clean up steps
      */
-    interface TestReportTeardown extends BackboneElement {
+    export interface TestReportTeardown extends BackboneElement {
         /**
          * One or more teardown operations performed
          */
@@ -23966,7 +23966,7 @@ declare module fhir {
     /**
      * One or more teardown operations performed
      */
-    interface TestReportTeardownAction extends BackboneElement {
+    export interface TestReportTeardownAction extends BackboneElement {
         /**
          * The teardown operation performed
          */
@@ -23975,7 +23975,7 @@ declare module fhir {
     /**
      * Describes the results of a TestScript execution
      */
-    interface TestReport extends DomainResource {
+    export interface TestReport extends DomainResource {
         /**
          * External identifier
          */
@@ -24052,7 +24052,7 @@ declare module fhir {
     /**
      * An abstract server representing a client or sender in a message exchange
      */
-    interface TestScriptOrigin extends BackboneElement {
+    export interface TestScriptOrigin extends BackboneElement {
         /**
          * The index of the abstract origin server starting at 1
          */
@@ -24069,7 +24069,7 @@ declare module fhir {
     /**
      * An abstract server representing a destination or receiver in a message exchange
      */
-    interface TestScriptDestination extends BackboneElement {
+    export interface TestScriptDestination extends BackboneElement {
         /**
          * The index of the abstract destination server starting at 1
          */
@@ -24086,7 +24086,7 @@ declare module fhir {
     /**
      * Required capability that is assumed to function correctly on the FHIR server being tested
      */
-    interface TestScriptMetadata extends BackboneElement {
+    export interface TestScriptMetadata extends BackboneElement {
         /**
          * Links to the FHIR specification
          */
@@ -24099,7 +24099,7 @@ declare module fhir {
     /**
      * Links to the FHIR specification
      */
-    interface TestScriptMetadataLink extends BackboneElement {
+    export interface TestScriptMetadataLink extends BackboneElement {
         /**
          * URL to the specification
          */
@@ -24120,7 +24120,7 @@ declare module fhir {
     /**
      * Capabilities  that are assumed to function correctly on the FHIR server being tested
      */
-    interface TestScriptMetadataCapability extends BackboneElement {
+    export interface TestScriptMetadataCapability extends BackboneElement {
         /**
          * Are the capabilities required?
          */
@@ -24177,7 +24177,7 @@ declare module fhir {
     /**
      * Fixture in the test script - by reference (uri)
      */
-    interface TestScriptFixture extends BackboneElement {
+    export interface TestScriptFixture extends BackboneElement {
         /**
          * Whether or not to implicitly create the fixture during setup
          */
@@ -24202,7 +24202,7 @@ declare module fhir {
     /**
      * Placeholder for evaluated elements
      */
-    interface TestScriptVariable extends BackboneElement {
+    export interface TestScriptVariable extends BackboneElement {
         /**
          * Descriptive name for this variable
          */
@@ -24271,7 +24271,7 @@ declare module fhir {
     /**
      * Assert rule used within the test script
      */
-    interface TestScriptRule extends BackboneElement {
+    export interface TestScriptRule extends BackboneElement {
         /**
          * Assert rule resource reference
          */
@@ -24284,7 +24284,7 @@ declare module fhir {
     /**
      * Rule parameter template
      */
-    interface TestScriptRuleParam extends BackboneElement {
+    export interface TestScriptRuleParam extends BackboneElement {
         /**
          * Parameter name matching external assert rule parameter
          */
@@ -24305,7 +24305,7 @@ declare module fhir {
     /**
      * Assert ruleset used within the test script
      */
-    interface TestScriptRuleset extends BackboneElement {
+    export interface TestScriptRuleset extends BackboneElement {
         /**
          * Assert ruleset resource reference
          */
@@ -24318,7 +24318,7 @@ declare module fhir {
     /**
      * The referenced rule within the ruleset
      */
-    interface TestScriptRulesetRule extends BackboneElement {
+    export interface TestScriptRulesetRule extends BackboneElement {
         /**
          * Id of referenced rule within the ruleset
          */
@@ -24335,7 +24335,7 @@ declare module fhir {
     /**
      * Ruleset rule parameter template
      */
-    interface TestScriptRulesetRuleParam extends BackboneElement {
+    export interface TestScriptRulesetRuleParam extends BackboneElement {
         /**
          * Parameter name matching external assert ruleset rule parameter
          */
@@ -24356,7 +24356,7 @@ declare module fhir {
     /**
      * A series of required setup operations before tests are executed
      */
-    interface TestScriptSetup extends BackboneElement {
+    export interface TestScriptSetup extends BackboneElement {
         /**
          * A setup operation or assert to perform
          */
@@ -24365,7 +24365,7 @@ declare module fhir {
     /**
      * A setup operation or assert to perform
      */
-    interface TestScriptSetupAction extends BackboneElement {
+    export interface TestScriptSetupAction extends BackboneElement {
         /**
          * The setup operation to perform
          */
@@ -24378,7 +24378,7 @@ declare module fhir {
     /**
      * The setup operation to perform
      */
-    interface TestScriptSetupActionOperation extends BackboneElement {
+    export interface TestScriptSetupActionOperation extends BackboneElement {
         /**
          * The operation code type that will be executed
          */
@@ -24503,7 +24503,7 @@ declare module fhir {
     /**
      * Each operation can have one or more header elements
      */
-    interface TestScriptSetupActionOperationRequestHeader extends BackboneElement {
+    export interface TestScriptSetupActionOperationRequestHeader extends BackboneElement {
         /**
          * HTTP header field name
          */
@@ -24524,7 +24524,7 @@ declare module fhir {
     /**
      * The assertion to perform
      */
-    interface TestScriptSetupActionAssert extends BackboneElement {
+    export interface TestScriptSetupActionAssert extends BackboneElement {
         /**
          * Tracking/logging assertion label
          */
@@ -24713,7 +24713,7 @@ declare module fhir {
     /**
      * The reference to a TestScript.rule
      */
-    interface TestScriptSetupActionAssertRule extends BackboneElement {
+    export interface TestScriptSetupActionAssertRule extends BackboneElement {
         /**
          * Id of the TestScript.rule
          */
@@ -24730,7 +24730,7 @@ declare module fhir {
     /**
      * Rule parameter template
      */
-    interface TestScriptSetupActionAssertRuleParam extends BackboneElement {
+    export interface TestScriptSetupActionAssertRuleParam extends BackboneElement {
         /**
          * Parameter name matching external assert rule parameter
          */
@@ -24751,7 +24751,7 @@ declare module fhir {
     /**
      * The reference to a TestScript.ruleset
      */
-    interface TestScriptSetupActionAssertRuleset extends BackboneElement {
+    export interface TestScriptSetupActionAssertRuleset extends BackboneElement {
         /**
          * Id of the TestScript.ruleset
          */
@@ -24768,7 +24768,7 @@ declare module fhir {
     /**
      * The referenced rule within the ruleset
      */
-    interface TestScriptSetupActionAssertRulesetRule extends BackboneElement {
+    export interface TestScriptSetupActionAssertRulesetRule extends BackboneElement {
         /**
          * Id of referenced rule within the ruleset
          */
@@ -24785,7 +24785,7 @@ declare module fhir {
     /**
      * Rule parameter template
      */
-    interface TestScriptSetupActionAssertRulesetRuleParam extends BackboneElement {
+    export interface TestScriptSetupActionAssertRulesetRuleParam extends BackboneElement {
         /**
          * Parameter name matching external assert ruleset rule parameter
          */
@@ -24806,7 +24806,7 @@ declare module fhir {
     /**
      * A test in this script
      */
-    interface TestScriptTest extends BackboneElement {
+    export interface TestScriptTest extends BackboneElement {
         /**
          * Tracking/logging name of this test
          */
@@ -24831,7 +24831,7 @@ declare module fhir {
     /**
      * A test operation or assert to perform
      */
-    interface TestScriptTestAction extends BackboneElement {
+    export interface TestScriptTestAction extends BackboneElement {
         /**
          * The setup operation to perform
          */
@@ -24844,7 +24844,7 @@ declare module fhir {
     /**
      * A series of required clean up steps
      */
-    interface TestScriptTeardown extends BackboneElement {
+    export interface TestScriptTeardown extends BackboneElement {
         /**
          * One or more teardown operations to perform
          */
@@ -24853,7 +24853,7 @@ declare module fhir {
     /**
      * One or more teardown operations to perform
      */
-    interface TestScriptTeardownAction extends BackboneElement {
+    export interface TestScriptTeardownAction extends BackboneElement {
         /**
          * The teardown operation to perform
          */
@@ -24862,7 +24862,7 @@ declare module fhir {
     /**
      * Describes a set of tests
      */
-    interface TestScript extends DomainResource {
+    export interface TestScript extends DomainResource {
         /**
          * Logical URI to reference this test script (globally unique)
          */
@@ -25015,7 +25015,7 @@ declare module fhir {
     /**
      * Definition of the content of the value set (CLD)
      */
-    interface ValueSetCompose extends BackboneElement {
+    export interface ValueSetCompose extends BackboneElement {
         /**
          * Fixed date for version-less references (transitive)
          */
@@ -25044,7 +25044,7 @@ declare module fhir {
     /**
      * Include one or more codes from a code system or other value set(s)
      */
-    interface ValueSetComposeInclude extends BackboneElement {
+    export interface ValueSetComposeInclude extends BackboneElement {
         /**
          * The system the codes come from
          */
@@ -25081,7 +25081,7 @@ declare module fhir {
     /**
      * A concept defined in the system
      */
-    interface ValueSetComposeIncludeConcept extends BackboneElement {
+    export interface ValueSetComposeIncludeConcept extends BackboneElement {
         /**
          * Code or expression from system
          */
@@ -25106,7 +25106,7 @@ declare module fhir {
     /**
      * Additional representations for this concept
      */
-    interface ValueSetComposeIncludeConceptDesignation extends BackboneElement {
+    export interface ValueSetComposeIncludeConceptDesignation extends BackboneElement {
         /**
          * Human language of the designation
          */
@@ -25131,7 +25131,7 @@ declare module fhir {
     /**
      * Select codes/concepts by their properties (including relationships)
      */
-    interface ValueSetComposeIncludeFilter extends BackboneElement {
+    export interface ValueSetComposeIncludeFilter extends BackboneElement {
         /**
          * A property defined by the code system
          */
@@ -25160,7 +25160,7 @@ declare module fhir {
     /**
      * Used when the value set is "expanded"
      */
-    interface ValueSetExpansion extends BackboneElement {
+    export interface ValueSetExpansion extends BackboneElement {
         /**
          * Uniquely identifies this expansion
          */
@@ -25205,7 +25205,7 @@ declare module fhir {
     /**
      * Parameter that controlled the expansion process
      */
-    interface ValueSetExpansionParameter extends BackboneElement {
+    export interface ValueSetExpansionParameter extends BackboneElement {
         /**
          * Name as assigned by the server
          */
@@ -25266,7 +25266,7 @@ declare module fhir {
     /**
      * Codes in the value set
      */
-    interface ValueSetExpansionContains extends BackboneElement {
+    export interface ValueSetExpansionContains extends BackboneElement {
         /**
          * System value for the code
          */
@@ -25327,7 +25327,7 @@ declare module fhir {
     /**
      * A set of codes drawn from one or more code systems
      */
-    interface ValueSet extends DomainResource {
+    export interface ValueSet extends DomainResource {
         /**
          * Logical URI to reference this value set (globally unique)
          */
@@ -25460,7 +25460,7 @@ declare module fhir {
     /**
      * Vision supply authorization
      */
-    interface VisionPrescriptionDispense extends BackboneElement {
+    export interface VisionPrescriptionDispense extends BackboneElement {
         /**
          * Product to be supplied
          */
@@ -25573,7 +25573,7 @@ declare module fhir {
     /**
      * Prescription for vision correction products for a patient
      */
-    interface VisionPrescription extends DomainResource {
+    export interface VisionPrescription extends DomainResource {
         /**
          * Business identifier
          */
@@ -25623,4 +25623,3 @@ declare module fhir {
      * Reference to a sub-type of ResourceBase. This is needed for stricter object literal typing introduced in TypeScript 1.6.
      */
     type Resource = (DomainResource|Account|ActivityDefinition|AdverseEvent|AllergyIntolerance|Appointment|AppointmentResponse|AuditEvent|Basic|BodySite|CapabilityStatement|CarePlan|CareTeam|ChargeItem|Claim|ClaimResponse|ClinicalImpression|CodeSystem|Communication|CommunicationRequest|CompartmentDefinition|Composition|ConceptMap|Condition|Consent|Contract|Coverage|DataElement|DetectedIssue|Device|DeviceComponent|DeviceMetric|DeviceRequest|DeviceUseStatement|DiagnosticReport|DocumentManifest|DocumentReference|EligibilityRequest|EligibilityResponse|Encounter|Endpoint|EnrollmentRequest|EnrollmentResponse|EpisodeOfCare|ExpansionProfile|ExplanationOfBenefit|FamilyMemberHistory|Flag|Goal|GraphDefinition|Group|GuidanceResponse|HealthcareService|ImagingManifest|ImagingStudy|Immunization|ImmunizationRecommendation|ImplementationGuide|Library|Linkage|List|Location|Measure|MeasureReport|Media|Medication|MedicationAdministration|MedicationDispense|MedicationRequest|MedicationStatement|MessageDefinition|MessageHeader|NamingSystem|NutritionOrder|Observation|OperationDefinition|OperationOutcome|Organization|Patient|PaymentNotice|PaymentReconciliation|Person|PlanDefinition|Practitioner|PractitionerRole|Procedure|ProcedureRequest|ProcessRequest|ProcessResponse|Provenance|Questionnaire|QuestionnaireResponse|ReferralRequest|RelatedPerson|RequestGroup|ResearchStudy|ResearchSubject|RiskAssessment|Schedule|SearchParameter|Sequence|ServiceDefinition|Slot|Specimen|StructureDefinition|StructureMap|Subscription|Substance|SupplyDelivery|SupplyRequest|Task|TestReport|TestScript|ValueSet|VisionPrescription|Binary|Bundle|Parameters);
-}
