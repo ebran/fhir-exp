@@ -1,14 +1,14 @@
 # Installation
-> `npm install --save @types/fhir`
+> `npm install fhir-exp`
 
 # Summary
-This package contains type definitions for FHIR Release 3 (STU) (http://hl7.org/fhir/index.html).
+This package contains type definitions for FHIR Release 3 (STU) (http://hl7.org/fhir/index.html) with exported interfaces.
 
 # Details
 Files were exported from https://www.github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/fhir
 
 Additional Details
- * Last updated: Mon, 17 Jul 2017 16:47:59 GMT
+ * Last updated: Tue, 17 Sep 2019
  * Dependencies: none
  * Global values: none
 
